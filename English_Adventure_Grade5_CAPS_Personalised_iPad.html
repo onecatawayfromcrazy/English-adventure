@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#153b50">
+<meta name="description" content="A personalised offline interactive Grade 5 CAPS English Home Language study companion with memory stars, a word bank, custom quizzes, mistake missions and three unlockable 40-mark practice papers.">
+<title>English Adventure · Star Missions | Grade 5 CAPS</title>
+<style>
+
+:root{--ink:#153b50;--ink2:#345468;--teal:#087d76;--teal2:#e2f4ef;--gold:#ffc963;--gold2:#fff4d8;--coral:#d96555;--coral2:#fff0ec;--bg:#f7f5ef;--paper:#fffdfa;--line:#e3e5e1;--sub:#647988;--white:#fff;--ok:#147850;--bad:#ad4036;--shadow:0 9px 30px rgba(20,49,63,.08);--radius:23px;--font-size:17px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:var(--font-size)/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-tap-highlight-color:transparent}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:4px solid #62c1be;outline-offset:2px}button:disabled{opacity:.48;cursor:not-allowed}h1,h2,h3,h4,p{margin:0}h1,h2,h3{line-height:1.19;letter-spacing:-.028em}h1{font-size:clamp(2.2rem,5vw,4.2rem)}h2{font-size:clamp(1.8rem,3.3vw,2.55rem)}h3{font-size:1.28rem}p+ p{margin-top:.6em}ul{padding-left:1.25em;margin:.4em 0 0}li+li{margin-top:.25em}.hidden,[hidden]{display:none!important}.wrap{max-width:1220px;margin:auto;padding-inline:clamp(16px,3vw,36px)}.eyebrow{text-transform:uppercase;font-size:.76rem;font-weight:900;letter-spacing:.13em;color:var(--teal)}.muted{color:var(--sub)}.small{font-size:.87rem}.tiny{font-size:.77rem}.strong{font-weight:850}.top{position:sticky;top:0;z-index:40;background:rgba(255,253,249,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.topinner{min-height:78px;display:flex;gap:14px;align-items:center;justify-content:space-between}.brand{display:flex;gap:12px;align-items:center;min-width:0}.brandicon{width:51px;height:51px;display:grid;place-items:center;border-radius:16px;background:var(--gold);font-size:29px;flex:none}.brand strong{display:block;line-height:1.1;font-size:1.1rem}.brand span:not(.brandicon){display:block;color:var(--sub);font-size:.77rem}.top-right{display:flex;align-items:center;gap:9px}.pill{border:1px solid var(--line);background:var(--white);border-radius:999px;padding:9px 13px;font-size:.83rem;font-weight:800}.pill.gold{background:var(--gold2);border-color:#f1d9a4}.nav{display:flex;align-items:center;gap:7px;overflow-x:auto;padding-bottom:12px;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav button{border:1px solid transparent;background:transparent;color:var(--ink2);border-radius:99px;padding:10px 16px;white-space:nowrap;font-weight:800;font-size:.87rem}.nav button.active{color:#fff;background:var(--ink);box-shadow:0 4px 10px rgba(21,59,80,.12)}.nav button:not(.active):hover{background:#edf2f0}.main{padding-top:28px;padding-bottom:50px;min-height:65vh}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:23px}.section-head p{color:var(--sub);margin-top:8px;max-width:750px}.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-align:center;border:0;border-radius:14px;padding:14px 20px;min-height:51px;font-weight:850;line-height:1.25}.btn.primary{background:var(--ink);color:#fff}.btn.teal{background:var(--teal);color:#fff}.btn.gold{background:var(--gold);color:#24394a}.btn.ghost{background:#fff;border:1px solid #cfdbd9;color:var(--ink)}.btn.soft{background:#e9f2f1;color:var(--ink)}.btn:hover:not(:disabled){filter:brightness(.97);transform:translateY(-1px)}.btn.sm{min-height:42px;padding:9px 14px;font-size:.86rem}.row{display:flex;gap:10px;align-items:center}.row.wraprow{flex-wrap:wrap}.hero{background:linear-gradient(120deg,#143c50 0%,#165469 74%,#087d76 140%);color:white;padding:clamp(26px,5vw,54px);border-radius:30px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(190px,.65fr);gap:22px;align-items:center;overflow:hidden;position:relative}.hero:before{content:"";position:absolute;right:-100px;bottom:-200px;width:420px;height:420px;border:2px solid rgba(255,255,255,.09);border-radius:50%;box-shadow:0 0 0 60px rgba(255,255,255,.025),0 0 0 120px rgba(255,255,255,.025)}.hero .eyebrow{color:var(--gold)}.hero h1{margin:8px 0 13px;max-width:660px}.hero p{color:#d5e8e8;max-width:570px;font-size:1.06rem}.heroActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.heroArt{position:relative;text-align:center;align-self:center}.heroArt .bigicon{font-size:clamp(110px,15vw,180px);filter:drop-shadow(0 22px 15px rgba(0,0,0,.2));line-height:1.3}.heroArt small{display:block;font-weight:800;color:#eaf4f1}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.stat{padding:22px;min-height:145px}.stat .number{font-size:2.3rem;font-weight:900;line-height:1.05;letter-spacing:-.06em}.stat .desc{color:var(--sub);font-size:.9rem;margin-top:6px}.section-space{margin-top:28px}.progress{height:11px;background:#e6eeec;border-radius:999px;overflow:hidden}.progress>span{display:block;height:100%;background:linear-gradient(90deg,#07877b,#7cc5a7);width:0%;border-radius:999px;transition:width .35s}.tile{padding:24px;text-align:left;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);min-width:0;box-shadow:var(--shadow)}button.tile{width:100%}.tile .emoji{font-size:2rem}.tile h3{margin:11px 0 6px}.tile p{color:var(--sub);font-size:.9rem}.tile .tilefoot{margin-top:17px;font-size:.83rem;font-weight:850;color:var(--teal)}.priority{background:var(--gold2);border-color:#eed7a0}.tip{padding:18px 20px;background:var(--gold2);border:1px solid #f2dcad;border-radius:16px}.tip.green{background:var(--teal2);border-color:#b9dfd4}.tip.coral{background:var(--coral2);border-color:#edcfc8}.lessonlayout{display:grid;grid-template-columns:290px minmax(0,1fr);gap:19px;align-items:start}.lessonmenu{padding:10px;position:sticky;top:143px;max-height:calc(100vh - 160px);overflow:auto}.lessonmenu button{display:flex;gap:10px;text-align:left;align-items:center;width:100%;border:0;background:transparent;border-radius:13px;padding:12px;font-weight:750;color:var(--ink2);font-size:.89rem;line-height:1.22}.lessonmenu button.active{background:#e6f3f0;color:var(--ink)}.lessonmenu button .num{display:grid;place-items:center;flex:none;width:34px;height:34px;background:#ecede8;border-radius:10px;font-size:.84rem}.lessonmenu button.active .num{background:var(--teal);color:white}.lessonmenu .check{margin-left:auto;color:var(--ok)}.lessonpanel{padding:clamp(20px,3.6vw,35px)}.lesson-title{margin:6px 0 10px}.lesson-intro{font-size:1.04rem;color:var(--ink2);max-width:800px}.info-block{margin-top:25px}.info-block h3{margin-bottom:12px}.info-block p{margin-bottom:9px}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.mini-item{background:#eef7f4;padding:16px;border-radius:16px;text-align:center}.mini-item .big{font-size:2.2rem;display:block;line-height:1.5}.mini-item strong{display:block;font-size:.9rem}.mini-item span:last-child{display:block;font-size:.84rem;color:var(--sub)}.arrowflow{display:flex;align-items:center;justify-content:center;color:#c88e2e;font-size:1.5rem;font-weight:900}.factlist{padding:0;margin:0;list-style:none;display:grid;gap:9px}.factlist li{padding:11px 13px 11px 37px;border-radius:13px;background:#f5f7f4;position:relative}.factlist li:before{content:"✓";position:absolute;left:14px;top:10px;font-weight:900;color:var(--teal)}.note{border-left:4px solid var(--gold);background:#fff8e8;padding:17px;border-radius:0 14px 14px 0;margin-top:16px}.note b{display:block;color:#80601e;margin-bottom:4px}.hierarchy{display:flex;flex-direction:column;gap:7px;align-items:center}.hierarchy div{text-align:center;color:white;border-radius:8px;padding:10px;font-weight:850;font-size:.85rem;max-width:100%}.hierarchy div:nth-child(1){background:#9b5e28;width:36%}.hierarchy div:nth-child(2){background:#b37c40;width:54%}.hierarchy div:nth-child(3){background:#256d83;width:72%}.hierarchy div:nth-child(4){background:#18817e;width:86%}.hierarchy div:nth-child(5){background:#153b50;width:100%}.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.compare>div{border-radius:17px;padding:17px;background:#f3f6f3}.compare>div:first-child{background:#fff2d8}.compare h4{font-size:1.01rem;margin-bottom:9px}.compare p{font-size:.94rem}.figureTitle{margin:20px 0 12px}.tag{display:inline-block;border-radius:99px;padding:5px 11px;background:#e7f4f0;color:#0b766d;font-weight:850;font-size:.73rem;letter-spacing:.03em}.tag.goldtag{background:#fff2d5;color:#856321}.lesson-actions{display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px;margin-top:26px;align-items:center}.flashShell{max-width:850px;margin:0 auto}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}.filters button{border:1px solid #d6e0df;background:#fff;color:var(--ink);border-radius:99px;padding:9px 16px;font-size:.88rem;font-weight:800;min-height:43px}.filters button.active{background:var(--teal);border-color:var(--teal);color:#fff}.flashCard{display:block;width:100%;min-height:330px;cursor:pointer;border:0;border-radius:28px;padding:33px;background:linear-gradient(145deg,#14435a,#087d76);color:#fff;position:relative;box-shadow:0 15px 36px rgba(9,73,79,.14);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;transition:transform .15s}.flashCard.is-back{background:linear-gradient(140deg,#f9dfaa,#ffeecb);color:var(--ink)}.flashCard .prompt{font-weight:900;font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.28}.flashCard .hint{color:#c9e8e5;font-weight:700;font-size:.88rem}.flashCard.is-back .hint{color:#8f6d30}.flashCard .cardtop{position:absolute;top:20px;left:25px;font-size:.75rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.flashControls{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;margin-top:18px}.flashControls .btn{flex:1}.card-meter{margin-top:12px;color:var(--sub);font-size:.88rem;text-align:center}.quizArea{max-width:900px;margin:auto}.quizCard{padding:clamp(21px,4vw,36px)}.question{font-weight:900;font-size:clamp(1.35rem,3vw,1.8rem);margin-top:12px;margin-bottom:24px}.choices{display:grid;gap:10px}.choice{display:flex;text-align:left;align-items:center;gap:14px;width:100%;border:2px solid #e5eae7;border-radius:15px;background:#fff;padding:16px 19px;min-height:61px;color:var(--ink);font-weight:750}.choice:hover:not(:disabled){border-color:#87c7bf}.choice .letter{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:10px;background:#edf3f1;font-weight:900}.choice.correct{border-color:#33a57e;background:#e7f9ef}.choice.wrong{border-color:#d88b79;background:#fff0eb}.feedback{padding:18px 20px;border-radius:15px;margin-top:18px;background:#eaf7f0;border:1px solid #c9e7d5}.feedback.bad{background:#fff1eb;border-color:#ebceca}.feedback h3{margin-bottom:5px}.quizFoot{display:flex;align-items:center;justify-content:space-between;margin-top:22px;gap:10px}.result{text-align:center;padding:clamp(28px,6vw,55px)}.result .medal{font-size:5rem;line-height:1.5}.result .grade{font-size:3.1rem;font-weight:950;letter-spacing:-.07em}.examIntro{padding:clamp(24px,4vw,36px)}.examQuestion{max-width:890px;margin:auto;padding:clamp(22px,4vw,38px)}.answerField{display:block;width:100%;min-height:155px;resize:vertical;border:2px solid #d6dfdc;border-radius:15px;padding:16px;color:var(--ink);background:#fff;font-size:1.02rem;line-height:1.55;margin:16px 0}.memo{padding:20px;background:var(--teal2);border:1px solid #c4e4d7;border-radius:15px;margin:17px 0}.memo strong{display:block;margin-bottom:8px}.markbuttons{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0 17px}.markbuttons button{width:48px;height:48px;border:2px solid #cbd7d2;border-radius:14px;background:#fff;font-weight:900;color:var(--ink)}.markbuttons button.active{background:var(--teal);color:#fff;border-color:var(--teal)}.examResults{max-width:940px;margin:auto}.reviewItem{padding:16px 0;border-bottom:1px solid var(--line)}.reviewItem p{margin-top:7px}.glossarySearch{display:flex;align-items:center;gap:10px;max-width:720px;background:white;padding:13px 18px;border:2px solid #d8e4e0;border-radius:15px;margin-bottom:18px}.glossarySearch input{width:100%;border:0;outline:0!important;background:transparent;font-size:1rem;color:var(--ink)}.glossItem{padding:18px 20px}.glossItem strong{font-size:1.06rem}.glossItem p{color:var(--sub);margin-top:5px;font-size:.92rem}.footer{margin-top:28px;padding:29px 0 34px;border-top:1px solid var(--line);font-size:.85rem;color:var(--sub)}.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.sep{display:inline-block;margin:0 8px;color:#adbdc0}.calloutbar{display:flex;align-items:center;justify-content:space-between;gap:13px;flex-wrap:wrap}.celebrate{animation:pop .4s ease}@keyframes pop{50%{transform:scale(1.04)}}
+@media(max-width:850px){.lessonlayout{grid-template-columns:1fr}.lessonmenu{position:static;display:flex;max-height:none;overflow-x:auto;gap:5px;scrollbar-width:thin}.lessonmenu button{min-width:185px;width:185px}.lessonmenu button .num{width:29px;height:29px;flex:none}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr .35fr}.heroArt .bigicon{font-size:100px}}
+@media(max-width:620px){.wrap{padding-inline:14px}.topinner{min-height:65px}.brandicon{width:42px;height:42px;font-size:23px}.brand strong{font-size:.94rem}.brand span:not(.brandicon){font-size:.67rem}.top-right .pill.gold{display:none}.nav{padding-bottom:9px}.nav button{font-size:.81rem;padding:9px 12px}.hero{grid-template-columns:1fr;padding:26px 23px}.heroArt{display:none}.hero h1{font-size:2.3rem}.grid3,.grid2,.compare{grid-template-columns:1fr}.stat{min-height:auto;padding:20px}.section-head{display:block}.flashCard{min-height:290px;padding:25px}.flashControls .btn{flex-basis:calc(50% - 5px)}.lessonpanel{padding:19px}.mini-grid{grid-template-columns:1fr 1fr}.mini-grid .mini-item:last-child{grid-column:1/-1}.quizFoot{flex-wrap:wrap}.top-right .pill{padding:8px 10px}.footer .wrap{display:block}.examQuestion{padding:20px}.heroActions .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* INTERACTIVE EDITION */
+.lessonpanel{scroll-margin-top:162px}
+.points-pill{background:#fff1c9;border-color:#f0d49a;color:#77511c;min-width:93px;text-align:center;white-space:nowrap}
+.grid3.statsgrid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pts-stat{background:linear-gradient(145deg,#fff8df,#fffdfa);border-color:#efdba9}
+.pts-stat .number{color:#977020}
+.hierarchy{gap:5px;margin:18px auto 0;max-width:710px}
+.hierarchy button.hierarchy-tier{position:relative;display:block;flex:none;border:0;min-height:60px;line-height:1.24;padding:10px 26px;border-radius:7px;color:#fff;font-weight:850;font-size:clamp(.83rem,1.7vw,1.02rem);text-align:center;box-shadow:0 3px 8px rgba(5,42,55,.14);transition:transform .18s,filter .18s;touch-action:manipulation}
+.hierarchy button.hierarchy-tier:nth-child(1){background:#a15e25;width:43%}
+.hierarchy button.hierarchy-tier:nth-child(2){background:#ba8243;width:58%}
+.hierarchy button.hierarchy-tier:nth-child(3){background:#287890;width:73%}
+.hierarchy button.hierarchy-tier:nth-child(4){background:#14827f;width:87%}
+.hierarchy button.hierarchy-tier:nth-child(5){background:#153b50;width:100%}
+.hierarchy button.hierarchy-tier.active{outline:4px solid #ffd170;outline-offset:2px;transform:scale(1.012);filter:brightness(1.11)}
+.hierarchy button.hierarchy-tier:hover{filter:brightness(1.12)}
+.tier-cue{position:absolute;right:12px;top:50%;transform:translateY(-50%);opacity:.75;font-size:.78rem}
+.hierarchy-detail{margin:18px auto 0;padding:19px 22px;border-radius:17px;max-width:710px;display:flex;align-items:flex-start;gap:18px;background:#edf7f3;border:1px solid #beded2;min-height:121px;animation:pop .25s ease}
+.hierarchy-detail.empty{display:block;text-align:center;background:#f3f6f1;border-style:dashed;color:var(--ink2)}
+.hierarchy-detail .tap-emoji{font-size:2.6rem;line-height:1.1;display:inline-block;flex:none}
+.hierarchy-detail h4{font-size:1.25rem;line-height:1.3;margin:4px 0 8px}
+.hierarchy-detail p{margin:0}
+.hierarchy-detail .rank-remember{font-weight:800;color:#086e69;margin-top:8px}
+.memory-note{margin-top:19px;border-left-color:#ffc963;background:#fff7e5}
+.memory-note summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:13px;min-height:55px;padding:4px 1px;font-weight:850}
+.memory-note summary::-webkit-details-marker{display:none}
+.memory-note summary>span:first-child{max-width:570px}
+.memory-note summary .reveal-cue{font-size:.83rem;white-space:nowrap;color:#805a1a;font-weight:800}
+.memory-note[open] summary .reveal-cue{font-size:0}
+.memory-note[open] summary .reveal-cue::after{content:'Hide answer ↑';font-size:.83rem}
+.memory-answer{border-top:1px solid #ead5a9;padding-top:15px}
+.memory-answer>p{margin-bottom:13px}
+.memory-check{display:flex;align-items:center;gap:13px;flex-wrap:wrap;border:2px solid #e0bf83;border-radius:15px;background:#fff;padding:13px 15px;cursor:pointer;margin-top:10px;min-height:62px;transition:background .2s}
+.memory-check input{width:24px;height:24px;flex:none;accent-color:var(--teal);cursor:pointer}
+.memory-check .checkbox-text{font-weight:900;flex:1;min-width:160px}
+.memory-check .point-reward{border-radius:99px;padding:4px 10px;background:var(--gold2);font-weight:850;color:#94651c;font-size:.82rem}
+.memory-check.is-done{background:#e2f4ef;border-color:#7dbea8}
+.memory-check.is-done .point-reward{background:#cee9db;color:#096b4c}
+.memory-toast{position:fixed;bottom:max(22px,env(safe-area-inset-bottom));right:20px;z-index:90;max-width:min(340px,calc(100vw - 40px));border-radius:16px;padding:16px 21px;background:#0a7569;box-shadow:0 12px 30px rgba(5,42,55,.25);font-weight:850;color:#fff;animation:pop .4s ease;pointer-events:none}
+@media(max-width:850px){.grid3.statsgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.top-right #progressPill{display:none}.top-right .points-pill{padding:7px 10px;min-width:auto}.grid3.statsgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.statsgrid .stat{padding:16px}.statsgrid .stat .number{font-size:1.8rem}.statsgrid .stat .eyebrow{font-size:.66rem}.hierarchy button.hierarchy-tier{min-height:66px;padding:9px 18px;font-size:.83rem}.hierarchy button.hierarchy-tier:nth-child(1){width:54%}.hierarchy button.hierarchy-tier:nth-child(2){width:65%}.hierarchy button.hierarchy-tier:nth-child(3){width:79%}.hierarchy button.hierarchy-tier:nth-child(4){width:89%}.hierarchy .tier-cue{right:8px}.hierarchy-detail{padding:16px;gap:12px}.hierarchy-detail .tap-emoji{font-size:2rem}.memory-note summary{display:block}.memory-note summary .reveal-cue{display:block;margin-top:7px}}
+
+
+/* KEY FACTS AND SELF-MARKING */
+.memo-header{display:flex;align-items:center;flex-wrap:wrap;gap:8px;justify-content:space-between;margin-bottom:9px}
+.memo-header strong{margin:0}
+.keyhint{font-size:.78rem;font-weight:800;color:#72521c;background:#ffecaa;padding:6px 11px;border-radius:99px}
+mark.keyphrase{background:#ffdf82;color:#3c3216;border-radius:5px;padding:1px 3px;font-weight:900;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.marking-guide{border:2px solid #c6e0d7;background:#f7fcfa;border-radius:18px;padding:17px 18px 15px;margin:20px 0}
+.marking-guide legend{padding:0 9px;font-size:1.1rem;font-weight:900;color:#135a51}
+.marking-guide .mark-instructions{font-size:.9rem;color:var(--ink2);margin:2px 0 14px}
+.mark-criteria{display:grid;gap:9px;margin:13px 0}
+.criterion{background:#fff;border:1px solid #d8e6df;border-radius:13px;display:flex;gap:12px;padding:13px;align-items:center;min-height:58px;cursor:pointer}
+.criterion:has(input:checked){background:#e7f6ec;border-color:#6db59a}
+.criterion input{width:24px;height:24px;flex:none;accent-color:var(--teal);cursor:pointer}
+.criterion-text{flex:1;font-size:.94rem;font-weight:650}
+.criterion .one-mark{background:#fff2d2;color:#7b5715;border-radius:99px;padding:3px 7px;font-size:.73rem;font-weight:900;white-space:nowrap}
+.mark-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid #d8e6df;padding-top:13px;margin-top:13px}
+.mark-summary strong{font-size:1.05rem}
+.mark-summary .earned-number{display:inline-block;background:#0e746b;color:#fff;padding:8px 12px;border-radius:12px;min-width:93px;text-align:center;font-weight:900}
+.mark-progress-note{font-size:.79rem;color:var(--sub);margin-top:8px}
+.memo.review-memo{padding:13px;background:#f1f9f5;margin:10px 0;font-size:.92rem}
+/* TAP-TO-REVEAL HISTORY WORD BANK */
+.glossItem{padding:0;overflow:hidden;align-self:start}
+.glossItem summary{list-style:none;display:flex;align-items:center;gap:8px;justify-content:space-between;cursor:pointer;min-height:67px;padding:17px 19px;font-weight:850;touch-action:manipulation}
+.glossItem summary::-webkit-details-marker{display:none}
+.glossItem summary:focus-visible{outline:4px solid #62c1be;outline-offset:-4px}
+.glossItem summary strong{flex:1;line-height:1.2}
+.glossItem .glossArrow{font-size:1.13rem;display:grid;place-items:center;width:31px;height:31px;flex:none;border-radius:50%;background:#eaf3ef;color:#087d76;transition:transform .18s}
+.glossItem[open]{border-color:#8dc9b9;background:#f5fbf7;box-shadow:0 8px 24px rgba(5,95,87,.07)}
+.glossItem[open] .glossArrow{transform:rotate(180deg);background:#d9f3e6}
+.glossItem p{border-top:1px solid #d6e7df;padding:15px 19px 20px;margin:0;color:var(--ink2);font-size:.94rem;animation:pop .2s ease}
+@media(max-width:620px){.marking-guide{padding:15px 12px}.criterion{padding:12px}.criterion .one-mark{font-size:.69rem}.mark-summary{align-items:center}}
+/* ⭐ STAR MISSIONS: lesson answers + word-bank mastery */
+.star-mission{padding:24px;background:#fffdf8}
+.star-mission-head,.word-mission-head{display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.star-mission-head h3{margin:5px 0 7px;font-size:1.5rem}
+.star-mission-head p{max-width:650px}
+.star-total,.word-mission-score{white-space:nowrap;font-size:1.42rem;font-weight:950;letter-spacing:-.035em;background:#ffecb0;border-radius:15px;padding:12px 15px;color:#6c4a0e}
+.star-goals{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:23px 0 20px}
+.star-goal{background:#f4f8f5;padding:16px;border-radius:16px;border:1px solid #deebe4}
+.star-goal-label{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:11px;font-size:.93rem}
+.star-goal-label span{font-weight:900;color:#80611e;white-space:nowrap}
+.star-goal .tiny{margin-top:7px}
+.word-mission{padding:20px 22px;margin-bottom:20px;background:#fffcf3;border-color:#f0d99d}
+.word-mission-head{margin-bottom:13px}
+.word-mission-head h3{margin-top:4px}
+.word-mission .progress{height:14px}
+.word-mission p{margin-top:12px}.word-mission p strong{display:inline-block;white-space:nowrap}
+.glossItem.known{border-color:#80c4a4;background:#f3fcf5}
+.word-chip{flex:none;color:#8c661a;font-size:.72rem;font-weight:900;border-radius:99px;background:#fff1cb;padding:5px 8px;white-space:nowrap}
+.glossItem.known .word-chip{background:#dff4e7;color:#116a49}
+.glossItem .glossDefinition p{border-top:0;padding:0;margin:0 0 14px}
+.glossDefinition{border-top:1px solid #d6e7df;padding:15px 19px 19px}
+.word-check{display:flex;gap:10px;align-items:center;flex-wrap:wrap;cursor:pointer;padding:12px;border-radius:12px;background:#fffdf6;border:1px solid #e6ddc2;min-height:56px;font-weight:800;line-height:1.27}
+.word-check input{height:23px;width:23px;accent-color:var(--teal);flex:none;cursor:pointer}
+.word-check .word-check-label{flex:1;min-width:135px}
+.word-check .word-reward{font-size:.8rem;color:#926615;background:#fff0c8;padding:5px 8px;border-radius:99px;white-space:nowrap}
+.word-check.is-done{background:#e6f6eb;border-color:#84c5a1}
+.word-check.is-done .word-reward{color:#136c46;background:#d4f1de}
+.word-instruction{display:block;margin-top:8px;font-size:.79rem;color:var(--sub)}
+@media(max-width:620px){.star-goals{grid-template-columns:1fr;gap:10px}.star-mission{padding:19px}.star-total,.word-mission-score{font-size:1.15rem}.word-mission{padding:18px}.word-chip{font-size:.67rem}#progressPill{display:none}.points-pill{min-width:auto;font-size:.76rem;padding:8px 9px}.top-right{gap:6px}}
+@media print{.marking-guide,.glossItem summary .glossArrow{display:none!important}}
+
+@media print{.top,.heroActions,.flashControls,.lessonmenu,.lesson-actions,.footer,.no-print{display:none!important}.main{padding:0}.lessonlayout{display:block}.lessonpanel,.card{border:0;box-shadow:none}.wrap{max-width:none}.lessonpanel{page-break-inside:avoid}}
+
+/* Interactive reveal tiles added for the expanded Ancient Egypt lessons */
+.discovery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.discovery-card{background:#eef7f4;border:1px solid #cae4dc;border-radius:16px;overflow:hidden;min-width:0}
+.discovery-card[open]{background:#fffdf8;border-color:#e7c66e;box-shadow:0 5px 16px rgba(24,70,70,.08)}
+.discovery-card summary{display:flex;gap:12px;align-items:center;list-style:none;padding:16px;min-height:76px;cursor:pointer;touch-action:manipulation;user-select:none}
+.discovery-card summary::-webkit-details-marker{display:none}
+.discovery-card summary:focus-visible{outline:3px solid #62c1be;outline-offset:-3px}
+.discovery-emoji{font-size:1.9rem;line-height:1.2;flex:none}
+.discovery-label{font-weight:850;line-height:1.25;flex:1}
+.discovery-chevron{font-size:1.5rem;color:#087d76;line-height:1;transition:transform .2s}
+.discovery-card[open] .discovery-chevron{transform:rotate(180deg)}
+.discovery-card p{padding:0 17px 18px 17px;margin:0;color:#345468;font-size:.97rem}
+@media(max-width:620px){.discovery-grid{grid-template-columns:1fr}.discovery-card summary{min-height:65px}}
+@media(prefers-reduced-motion:reduce){.discovery-chevron{transition:none}}
+
+/* English Adventure additions - matching History Quest visual system */
+.ad-sample{background:linear-gradient(130deg,#174a5d,#0b7d73);border-radius:23px;padding:25px 24px;color:#fff;position:relative;overflow:hidden}
+.ad-sample:after{content:'🌿';font-size:10rem;position:absolute;right:-14px;bottom:-90px;opacity:.14;pointer-events:none}
+.ad-sample h4{font-size:clamp(1.35rem,3vw,2.1rem);font-weight:950;letter-spacing:-.025em;margin:4px 0 6px;color:#fff}
+.ad-sample p{margin:0 0 8px;color:#f5fffa}.ad-sample .ad-slogan{color:#ffe399;font-weight:900;font-size:1.02rem}.ad-detail{display:inline-block;padding:7px 10px;border-radius:11px;background:rgba(255,255,255,.14);margin:3px;font-size:.87rem;font-weight:800}.ad-note{font-size:.7rem;color:#d7ece7!important;margin-top:14px!important}
+.reading-story{padding:20px 22px;border:1px solid #c8e2db;background:#f0f9f5;border-radius:17px;line-height:1.85}.reading-story p+p{margin-top:11px}.reading-story .paragraph-no{font-size:.77rem;color:#45807b;font-weight:900;display:inline-block;margin-right:7px}
+.lesson-practice{padding:18px 20px;border-radius:16px;background:#eff7f5;border:1px solid #bcddd3;margin-top:26px}.lesson-practice .choice{min-height:51px;padding:11px 15px}.lesson-practice .choice .letter{width:27px;height:27px}
+.bar-chart{display:grid;gap:12px;border-radius:17px;background:#f6faf6;padding:20px}.bar-line{display:grid;grid-template-columns:90px minmax(0,1fr) 32px;gap:11px;align-items:center;font-size:.87rem}.bar-track{height:27px;border-radius:0 9px 9px 0;background:#e3eae6;overflow:hidden}.bar-fill{height:100%;border-radius:0 9px 9px 0;background:linear-gradient(90deg,#0f8175,#63bdac)}
+.exam-context{margin-top:15px}.exam-context details{padding:0 0 12px}.exam-context summary{padding:12px 16px;cursor:pointer;font-weight:900;color:#106f69}.exam-context .reading-story{margin:0 12px}.exam-context .ad-sample{margin:0 12px}
+.exam-quick-view{display:flex;flex-wrap:wrap;gap:7px;margin:13px 0}.exam-quick-view span{font-size:.81rem;padding:6px 9px;background:#edf5f2;border-radius:99px;font-weight:800;color:#23566a}
+.alert-small{padding:12px 15px;background:#fff7e8;border:1px solid #f0d3a6;border-radius:12px;color:#634d27;font-size:.88rem}
+.tap-tip{display:block;color:var(--sub);font-size:.8rem;margin-top:8px}
+.quiz-pack{font-size:.82rem;font-weight:900;color:#fff2d4;background:#1c6574;padding:7px 12px;border-radius:99px}
+@media(max-width:620px){.bar-line{grid-template-columns:69px minmax(0,1fr) 25px;gap:7px}.ad-sample{padding:18px 16px}.reading-story{padding:16px}}
+
+/* English Adventure: unlockable practice papers and flexible quiz setup */
+.unlock-card{padding:20px;border:1px solid var(--line);border-radius:20px;background:var(--paper);box-shadow:var(--shadow)}
+.unlock-card.locked{background:#f4f6f5;border-style:dashed;box-shadow:none}
+.unlock-card .unlock-icon{font-size:2.15rem;line-height:1.4}
+.unlock-card h3{margin:8px 0 7px}
+.unlock-card p{color:var(--ink2);font-size:.89rem}
+.unlock-card .progress{margin:15px 0 8px}
+.unlock-card .unlock-footer{margin-top:16px}
+.unlock-card .btn{width:100%}
+.unlock-tag{display:inline-block;font-size:.76rem;font-weight:900;border-radius:999px;padding:5px 10px;background:#e6f2ed;color:#116b51}
+.locked .unlock-tag{color:#6b737c;background:#e7e9e9}
+.quest-settings{padding:23px}
+.quest-settings fieldset{border:0;padding:0;margin:18px 0}
+.quest-settings legend{font-size:.95rem;font-weight:900;margin-bottom:10px}
+.quest-options{display:flex;gap:8px;flex-wrap:wrap}
+.quest-options button{border:2px solid #d6e2df;background:#fff;color:var(--ink);font-weight:850;border-radius:12px;padding:12px 14px;min-height:47px}
+.quest-options button.active{border-color:#087d76;background:#e3f4ef;color:#075a54}
+.quest-options button:disabled{opacity:.35}
+.quest-settings .quest-note{font-size:.9rem;color:var(--sub);margin:10px 0}
+.quiz-topic-tag{font-size:.8rem;color:#43687a;font-weight:800}
+@media(max-width:620px){.quest-settings{padding:19px}.quest-options button{flex:1;min-width:110px}}
+/* Learner name · personalised welcome and easy editing */
+.learner-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;max-width:190px;white-space:nowrap}
+.learner-btn span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:132px}
+.hero-greeting{display:inline-block;margin-top:10px!important;margin-bottom:3px;font-weight:850;color:#ffe5a1!important;font-size:1.06rem!important}
+.learner-dialog{width:min(460px,calc(100vw - 28px));max-height:calc(100dvh - 28px);overflow:auto;border:1px solid #d9e6df;border-radius:25px;background:var(--paper);color:var(--ink);padding:0;box-shadow:0 20px 85px rgba(11,44,60,.3)}
+.learner-dialog::backdrop{background:rgba(16,46,61,.72);backdrop-filter:blur(5px)}
+.learner-dialog form{padding:clamp(24px,5vw,34px)}
+.learner-dialog .welcome-emoji{font-size:3.5rem;line-height:1.1;display:block;margin-bottom:12px}
+.learner-dialog h2{font-size:clamp(1.65rem,4.2vw,2.05rem);margin:7px 0 13px}
+.learner-dialog p{color:var(--ink2)}
+.learner-dialog label{display:block;margin:21px 0 8px;font-weight:900}
+.learner-name-input{width:100%;height:57px;background:#fff;border:2px solid #b5d5cc;border-radius:14px;padding:12px 15px;font-size:1.07rem;color:var(--ink)}
+.learner-name-input:focus{outline:3px solid #62c1be;outline-offset:1px}
+.learner-dialog .name-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.learner-dialog .name-actions .btn.primary{flex:1}
+.learner-dialog .name-note{margin-top:14px;font-size:.78rem;color:var(--sub)}
+@media(max-width:620px){.learner-btn{padding:7px 10px;min-width:39px}.learner-btn span{display:none}.brand strong{max-width:166px;overflow-wrap:anywhere;font-size:.85rem}.topinner{gap:7px}}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="wrap topinner">
+<div class="brand"><span class="brandicon" aria-hidden="true">📚</span><div><strong id="appBrand">ENGLISH ADVENTURE</strong><span>Grade 5 · CAPS · Star Missions</span></div></div>
+<div class="top-right"><span class="pill gold">🌟 LEARN & GROW</span><button id="learnerBtn" class="pill learner-btn" type="button" aria-label="Add learner name">👤 <span id="learnerButtonName">Your name</span></button><span class="pill points-pill" id="pointPill" aria-live="polite">⭐ 0 / goal</span><button id="fontBtn" class="pill" type="button" aria-label="Increase text size">A+</button><span class="pill" id="progressPill">0 lessons</span></div>
+</div>
+<nav class="wrap nav" aria-label="Study sections">
+<button class="active" data-page="home" type="button" aria-current="page">🏠 Home</button>
+<button data-page="lessons" type="button">📖 Lessons</button>
+<button data-page="flashcards" type="button">🃏 Flashcards</button>
+<button data-page="quiz" type="button">⚡ Quick quiz</button>
+<button data-page="exam" type="button">🏆 Practice paper</button>
+<button data-page="glossary" type="button">🔎 Word bank</button>
+</nav>
+</header>
+<main class="wrap main" id="main">
+<section id="page-home">
+<div class="hero"><div><div class="eyebrow">YOUR ENGLISH ADVENTURE STARTS HERE</div><h1>Read. Think. Master.</h1><p id="heroGreeting" class="hero-greeting">Welcome, adventurer!</p><p>Solve reading mysteries, unlock clever word tricks and collect stars as you become an English champion.</p><div class="heroActions"><button type="button" class="btn gold" data-go="lessons">📖 Start learning</button><button type="button" class="btn ghost" data-go="quiz">⚡ Try a quiz</button></div></div><div class="heroArt" aria-hidden="true"><div class="bigicon">📚</div><small>Every new word is a superpower.</small></div></div>
+<div class="grid3 statsgrid section-space">
+<div class="card stat"><div class="eyebrow">LESSONS FINISHED</div><div class="number" id="statLessons">0</div><div class="desc">Short English missions</div><div class="progress" style="margin-top:14px"><span id="homeProgress"></span></div></div>
+<div class="card stat"><div class="eyebrow">FLASHCARDS LEARNT</div><div class="number" id="statCards">0</div><div class="desc">Flip, explain and remember</div></div>
+<div class="card stat"><div class="eyebrow">YOUR BEST QUIZ</div><div class="number" id="statQuiz">—</div><div class="desc">Choose 10, 20, 30 or all questions</div></div>
+<div class="card stat pts-stat"><div class="eyebrow">YOUR STUDY STARS</div><div class="number" id="statPoints">⭐ 0</div><div class="desc" id="statMemory">Lesson answers + word bank</div><div class="progress" style="margin-top:14px"><span id="starProgress"></span></div></div>
+</div>
+<div class="card star-mission section-space">
+<div class="star-mission-head"><div><div class="eyebrow">THE BIG STAR CHALLENGE</div><h3>Can you collect EVERY star? ⭐</h3><p class="small muted">Earn stars by remembering answers and explaining word meanings without peeking.</p></div><div class="star-total" id="starMissionTotal">0 / goal ⭐</div></div>
+<div class="star-goals"><div class="star-goal"><div class="star-goal-label"><strong>🧠 Lesson memory answers</strong><span id="lessonStarGoal">0 / goal ⭐</span></div><div class="progress"><span id="lessonStarProgress"></span></div><p class="tiny muted">5 stars for every memorised lesson answer</p></div><div class="star-goal"><div class="star-goal-label"><strong>🔎 Word bank challenge</strong><span id="wordStarGoal">0 / goal ⭐</span></div><div class="progress"><span id="wordStarProgress"></span></div><p class="tiny muted">2 stars for every word you can explain</p></div></div>
+<button type="button" class="btn gold sm" data-go="glossary">Collect word-bank stars →</button>
+</div>
+<div class="section-head section-space"><div><div class="eyebrow">CHOOSE A MISSION</div><h2>What will you learn today?</h2></div></div>
+<div class="grid3">
+<button class="tile" type="button" data-go="lessons"><div class="emoji">🕵️</div><h3>Explore 14 lessons</h3><p>Short explanations, tappable discoveries, mini challenges and memory stars.</p><div class="tilefoot">LET'S LEARN →</div></button>
+<button class="tile" type="button" data-go="flashcards"><div class="emoji">🃏</div><h3>Flip the flashcards</h3><p>Answer from memory before flipping. Track all the cards you know.</p><div class="tilefoot">TEST YOUR MEMORY →</div></button>
+<button class="tile" type="button" data-go="exam"><div class="emoji">🏆</div><h3>Unlock 3 practice papers</h3><p>Finish lessons to unlock Rookie, Rising Star and English Champion papers.</p><div class="tilefoot">VIEW UNLOCK PROGRESS →</div></button>
+</div>
+<div id="unlockHome" class="section-space" aria-live="polite"></div>
+<div class="card priority section-space" style="padding:22px"><div class="calloutbar"><div><div class="eyebrow">YOUR ENGLISH GAME PLAN</div><h3 style="margin:6px 0">Reading 15 <span class="sep">•</span> Visuals 10 <span class="sep">•</span> Summary 5 <span class="sep">•</span> Language 10</h3><p class="small muted">A common 40-mark paper structure. Your actual school paper can be different.</p></div><button class="btn primary sm" type="button" data-go="exam">View practice papers</button></div></div>
+<div class="tip green section-space"><b id="learningTipTitle">🌟 Your learning trick</b><p>Try to say an answer <strong>before</strong> you reveal it. If you can explain it in your own words, you really know it. And remember: “Why?” questions need reasons.</p></div>
+</section>
+<section id="page-lessons" hidden><div class="section-head"><div><div class="eyebrow">READ · DISCOVER · PRACTISE</div><h2>Fourteen English lessons</h2><p>Choose a topic, tap to reveal examples, try its mini challenge and earn 5 ⭐ for every answer you know by heart.</p></div></div><div class="lessonlayout"><aside class="card lessonmenu" id="lessonMenu" aria-label="Choose a lesson"></aside><article class="card lessonpanel" id="lessonPanel"></article></div></section>
+<section id="page-flashcards" hidden><div class="section-head"><div><div class="eyebrow">MEMORY TRAINING</div><h2>Tap. Flip. Remember.</h2><p>Say the answer out loud first. Tap to flip and see how close you were.</p></div></div><div class="flashShell"><div class="filters" id="flashFilters"></div><div id="flashContent"></div></div></section>
+<section id="page-quiz" hidden><div class="section-head"><div><div class="eyebrow">YOUR QUIZ · YOUR RULES</div><h2>Choose your challenge</h2><p>Play 10, 20, 30 or all questions. Choose a skill to practise, or retry questions that were tricky last time.</p></div></div><div class="quizArea" id="quizContent"></div></section>
+<section id="page-exam" hidden><div class="section-head"><div><div class="eyebrow">3 UNLOCKABLE PAPERS · 40 MARKS EACH</div><h2>Your practice-paper missions</h2><p>Complete lessons to open each paper. Write your answers, reveal model ideas and mark your work.</p></div></div><div id="examContent"></div></section>
+<section id="page-glossary" hidden><div class="section-head"><div><div class="eyebrow">YOUR WORD POWER · +2 ⭐ EACH</div><h2>The English word bank</h2><p>Try to explain each word before you tap it. Reveal the meaning, then tick when you can say it without help.</p></div></div><div class="card word-mission" aria-live="polite"><div class="word-mission-head"><div><div class="eyebrow">WORD BANK STAR CHALLENGE</div><h3 id="wordProgressCount">0 words memorised</h3></div><div class="word-mission-score" id="wordProgressStars">0 / goal ⭐</div></div><div class="progress" aria-label="Word bank progress"><span id="wordProgressBar"></span></div><p class="small muted">Full star mission (lessons + words): <strong id="totalStarsInBank">0 / goal ⭐</strong></p></div><label class="glossarySearch">🔎 <input id="glossSearch" type="search" placeholder="Search a word or its meaning…" aria-label="Search the English word bank" autocomplete="off"></label><div id="glossCount" class="small muted" style="margin-bottom:13px"></div><div id="glossItems" class="grid3"></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div><span id="footerLearner">Your English Adventure</span> · Grade 5 CAPS English Home Language<br><span class="tiny">14 lessons · flexible quizzes · 3 unlockable 40-mark papers</span></div><div>🔒 One offline HTML file · Progress saved in this browser when supported</div></div></footer>
+<div id="statusToast" aria-live="polite"></div>
+<dialog id="learnerDialog" class="learner-dialog" aria-labelledby="nameDialogTitle" aria-describedby="nameDialogDescription">
+ <form id="learnerForm">
+  <span class="welcome-emoji" aria-hidden="true">🌟📚</span>
+  <div class="eyebrow">WELCOME TO ENGLISH ADVENTURE</div>
+  <h2 id="nameDialogTitle">What’s your name, adventurer?</h2>
+  <p id="nameDialogDescription">Tell us your first name so we can make this adventure yours!</p>
+  <label for="learnerNameInput">Your name</label>
+  <input id="learnerNameInput" class="learner-name-input" name="learnerName" type="text" placeholder="e.g. Noah" autocomplete="given-name" maxlength="32" required>
+  <div class="name-actions"><button type="submit" class="btn primary" id="saveLearnerName">🌟 Start my adventure</button><button type="button" class="btn ghost" id="cancelLearnerName" hidden>Cancel</button></div>
+  <p class="name-note">Your name is saved in this browser. Changing it later does not erase your stars or completed lessons.</p>
+ </form>
+</dialog>
+<script>
+'use strict';
+const lessons = [
+{id:'story',emoji:'📖',title:'Inside a story',category:'Reading',time:'6 minutes',intro:'Every story has clues. Find out WHO it is about, WHERE it happens, WHAT happens and HOW things change.',blocks:[
+ {type:'flow',title:'A story has a journey',items:[['🌅','BEGINNING','Meet the characters and setting.'],['⚡','MIDDLE','A problem or exciting event happens.'],['🏁','ENDING','Find out how the problem is solved.']]},
+ {type:'explore',title:'Tap each story clue',items:[['🧒','Character','The person or animal in the story. The main character is the most important one.'],['📍','Setting','Where and when the events happen. Example: a golf course on Saturday morning.'],['🎯','Plot','The important events that make up the story.'],['🧩','Problem','The challenge the characters need to solve.'],['💡','Theme','An important idea in a story, such as teamwork or courage.'],['✍️','Author','The person who wrote the story.']]},
+ {type:'passage',title:'Read this mini story','text':'On Saturday morning, Liam arrived at the school garden to water the seedlings. The gate was locked, and his teacher had left the key at home. Instead of giving up, Liam found a watering can and poured water gently through the fence. When the teacher arrived, the little plants were safe.'},
+ {type:'practice',q:'Where is the story set?',opts:['At the beach','At a school garden','In a library','In a kitchen'],a:1,why:'The setting is the school garden, on Saturday morning.'},
+ {type:'note',title:'Memory answer · How do you find the setting?',text:'Look for clues about the place and time. The setting tells you where and when a story happens.'},
+ {type:'note',title:'Memory answer · What is the plot?',text:'The plot is the order of important events in a story: the beginning, the problem and the ending.'}
+]},
+{id:'comprehension',emoji:'🔍',title:'Become a reading detective',category:'Reading',time:'7 minutes',intro:'Good comprehension answers use evidence from the passage, not just guesses.',blocks:[
+ {type:'explore',title:'Four kinds of comprehension questions',items:[['👀','Find it','The answer is written in the passage. Example: What did Liam use to water the seedlings?'],['🧠','Work it out','Use clues to infer something the writer does not say directly.'],['💬','Your opinion','Share what you think AND support it with a reason.'],['📝','Quote','Copy the exact words asked for, usually inside quotation marks.']]},
+ {type:'compare',title:'Fact and opinion',left:['✅ Fact','Something that can be checked or proved. “The class walked to the library.”'],right:['💭 Opinion','What someone thinks or feels. “The library was the best place ever.”']},
+ {type:'facts',title:'How to give a strong answer',items:['Read the question before searching for the answer.','Find the right paragraph and underline the clue in your mind.','If asked WHY, explain the reason.','If asked to quote, use the same words as the text.','If asked for an opinion, write what you think AND give a reason.','Use full sentences unless the question says otherwise.']},
+ {type:'practice',q:'Question: “Do you think Liam was helpful? Give a reason.” Which answer is strongest?',opts:['Yes.','Yes, because he found a way to water the plants even though the gate was locked.','I like plants.','He used a watering can.'],a:1,why:'An opinion question with “give a reason” needs both your view and your explanation.'},
+ {type:'note',title:'Memory answer · How do you answer a WHY question?',text:'Say what happened and explain the reason. Use a clue from the story to support your answer.'},
+ {type:'note',title:'Memory answer · What is an inference?',text:'An inference is something you work out using clues in the text and what you already know.'}
+]},
+{id:'vocabulary',emoji:'🧩',title:'Word clues & meaning',category:'Vocabulary',time:'5 minutes',intro:'You can often work out an unfamiliar word by reading the whole sentence.',blocks:[
+ {type:'compare',title:'Synonym or antonym?',left:['🤝 Synonym','A word with the same or nearly the same meaning. Huge = enormous.'],right:['↔️ Antonym','A word with an opposite meaning. Huge ≠ tiny.']},
+ {type:'explore',title:'Three vocabulary detective tricks',items:[['🔎','Look around the word','Read the sentence before and after it for clues.'],['🔄','Swap the word','Try a simpler word that keeps the meaning.'],['🎭','Notice the feeling','“Strolled” suggests a relaxed walk. “Dashed” suggests a fast movement.']]},
+ {type:'practice',q:'“The goalkeeper dashed across the field.” What does “dashed” most likely mean?',opts:['Slept','Moved quickly','Spoke softly','Waited quietly'],a:1,why:'A goalkeeper racing across a field would move quickly.'},
+ {type:'note',title:'Memory answer · What are synonyms and antonyms?',text:'Synonyms have the same or similar meanings. Antonyms have opposite meanings.'},
+ {type:'note',title:'Memory answer · What are context clues?',text:'Context clues are words and details around a new word that help you work out its meaning.'}
+]},
+{id:'ads',emoji:'📢',title:'Read an advertisement',category:'Visual literacy',time:'6 minutes',intro:'An advertisement uses both words and pictures to make people notice something and want to act.',blocks:[
+ {type:'ad',title:'Read the advertisement',event:'JUNIOR DISCOVERY DAY',slogan:'Try something new. Find your spark!',date:'Saturday 14 November',place:'Ocean View Community Hall',cost:'Entry: R20 · Under 6s free',contact:'Book: discoveryday@example.org',extras:'Games • Books • Art • Mini sports',foot:'Illustrative event for practice only'},
+ {type:'explore',title:'Tap the important parts of an advert',items:[['🏷️','Heading','Big words that immediately tell you what is being advertised.'],['📣','Slogan','A short, catchy phrase that helps people remember the event or product.'],['👨‍👩‍👧','Target audience','The people the advert is meant to attract.'],['📆','Practical details','When, where, cost and how to book.'],['🎨','Design','Pictures, large letters and colours attract the reader’s attention.'],['👉','Call to action','What the advertiser wants the reader to do: book, visit or buy.']]},
+ {type:'practice',q:'Who is the target audience for Discovery Day?',opts:['Only professional athletes','Families and children who enjoy activities','Only teachers','Only elderly people'],a:1,why:'Games, art, books and mini sports show that the event is meant for children and families.'},
+ {type:'note',title:'Memory answer · What is a target audience?',text:'The target audience is the group of people the advertisement is trying to attract.'},
+ {type:'note',title:'Memory answer · Name three ways an advert gets attention',text:'Big headlines, bright colours or striking pictures, and a catchy slogan are three common methods.'}
+]},
+{id:'visual',emoji:'📊',title:'Graphs, tables & weather',category:'Visual literacy',time:'7 minutes',intro:'Visual texts communicate information through numbers, pictures, symbols, charts and short labels.',blocks:[
+ {type:'chart',title:'Library books borrowed this week',items:[['Adventure',12],['Animals',8],['Sport',15],['Science',5]]},
+ {type:'facts',title:'Reading charts and tables',items:['Read the title first: it tells you what the information is about.','Check the labels and the numbers or units.','Most = largest number. Least = smallest number.','For “how many more?”, subtract the smaller number from the larger one.','Check whether numbers refer to people, books, money, days or dozens.']},
+ {type:'explore',title:'Weather report symbols & clues',items:[['☀️','Sunny','Little cloud cover. Temperatures may be higher.'],['🌧️','Rain','Wet weather is expected; take a raincoat.'],['💨','Wind','Look for the wind direction and speed, such as 30 km/h.'],['🌡️','Temperature','Usually measured in degrees Celsius (°C).']]},
+ {type:'practice',q:'How many MORE Sport books than Science books were borrowed?',opts:['5','8','10','20'],a:2,why:'Sport = 15, Science = 5. So 15 − 5 = 10.'},
+ {type:'note',title:'Memory answer · How do you read a graph?',text:'Read the heading and labels, look carefully at the values and units, then use those numbers to answer the question.'},
+ {type:'note',title:'Memory answer · What does km/h mean?',text:'Kilometres per hour. It is a way to measure speed, including wind speed.'}
+]},
+{id:'summary',emoji:'📝',title:'Write a brilliant summary',category:'Summary',time:'7 minutes',intro:'A summary tells the important ideas in a shorter way, using your own words.',blocks:[
+ {type:'flow',title:'Five steps to a summary',items:[['1️⃣','READ','Understand the whole text.'],['2️⃣','PICK','Find the main idea in each paragraph.'],['3️⃣','PLAN','Put ideas in a sensible order.'],['4️⃣','WRITE','Use your own words, in full sentences.'],['5️⃣','CHECK','Count words and check grammar.']]},
+ {type:'compare',title:'Main idea vs small detail',left:['⭐ Main idea','The class planted vegetables to help the community.'],right:['🌱 Small detail','One learner carried a green watering can with a blue handle.']},
+ {type:'facts',title:'Your summary checklist',items:['Include the most important ideas, not every detail.','Do not add new information or your personal opinion.','Join ideas into a paragraph if that is required.','Use your own words.','Some of the practice papers ask for about 50–60 words in five sentences. Always follow the instructions on your actual paper.','Write a draft, improve it and add your word count if requested.']},
+ {type:'practice',q:'Which sentence belongs in a summary about a class beach clean-up?',opts:['I love walking on warm sand.','Sasha wore a red hat with white dots.','The learners collected litter to help keep the beach clean.','Our beach is definitely the best beach in the world.'],a:2,why:'This sentence gives a main event without extra description or opinion.'},
+ {type:'note',title:'Memory answer · What is a summary?',text:'A summary is a shorter version of a text that includes its main ideas in your own words.'},
+ {type:'note',title:'Memory answer · Name three summary rules',text:'Use the main ideas, write in your own words and do not add unimportant details or personal opinions.'}
+]},
+{id:'nouns',emoji:'🏷️',title:'Nouns & pronouns',category:'Language',time:'7 minutes',intro:'Nouns name things. Pronouns take the place of nouns so our sentences do not sound repetitive.',blocks:[
+ {type:'explore',title:'Tap to explore types of nouns',items:[['🐕','Common noun','A general name: dog, coach, school.'],['🌍','Proper noun','A special name: Cape Town, Noah, Monday. Start it with a capital letter.'],['💛','Abstract noun','An idea or feeling: courage, kindness, freedom.'],['👥','Collective noun','A word for a group: team of players, flock of birds, bunch of flowers.']]},
+ {type:'explore',title:'Three useful pronoun groups',items:[['🧒','Personal','I, you, he, she, it, we, they, me, him, her, us, them.'],['🪞','Reflexive','myself, yourself, himself, herself, itself, ourselves, themselves.'],['🔗','Relative','who, which, that. They connect a noun to more information: “The girl who won smiled.”']]},
+ {type:'practice',q:'In “The team showed great courage,” what kind of noun is “courage”?',opts:['Common noun','Proper noun','Abstract noun','Collective noun'],a:2,why:'Courage is a quality you cannot touch, so it is an abstract noun.'},
+ {type:'note',title:'Memory answer · Name four kinds of nouns',text:'Common nouns name general things. Proper nouns name particular people or places. Abstract nouns name ideas or feelings. Collective nouns name groups.'},
+ {type:'note',title:'Memory answer · What is a reflexive pronoun?',text:'A reflexive pronoun refers back to the subject, such as myself, herself or themselves.'}
+]},
+{id:'verbs',emoji:'⏱️',title:'Verbs, tenses & agreement',category:'Language',time:'7 minutes',intro:'Verbs tell us what happens. Tenses tell us when it happens.',blocks:[
+ {type:'flow',title:'One action, three tenses',items:[['⏪','PAST','Yesterday, we played.'],['▶️','PRESENT','Today, we play.'],['⏩','FUTURE','Tomorrow, we will play.']]},
+ {type:'explore',title:'Tap these grammar tools',items:[['🏃','Action verb','An action or event: jump, write, run, slept.'],['🤝','Subject–verb agreement','The subject and verb must match: “She runs.” / “They run.”'],['🙅','Negative form','Make the sentence negative: “He likes rain.” → “He does not like rain.”'],['🎯','Subject & object','Subject does the action; object receives it. “Noah kicked the ball.” Subject = Noah; object = ball.'],['📚','Gerund','A verb ending in -ing used like a noun: “Swimming is fun.”']]},
+ {type:'practice',q:'Choose the correct sentence.',opts:['The players was ready.','The players were ready.','The players is ready.','The players be ready.'],a:1,why:'A plural subject like “players” takes “were”, not “was”.'},
+ {type:'note',title:'Memory answer · Give past, present and future forms',text:'Past: She walked. Present: She walks. Future: She will walk.'},
+ {type:'note',title:'Memory answer · What is subject–verb agreement?',text:'The verb must match the subject: “He plays” but “They play”.'}
+]},
+{id:'describing',emoji:'🎨',title:'Adjectives & adverbs',category:'Language',time:'5 minutes',intro:'Give your sentences colour! Adjectives describe nouns, while adverbs tell us more about actions.',blocks:[
+ {type:'compare',title:'Spot the difference',left:['🎈 Adjective','Describes a noun: “The colourful kite flew.”'],right:['🚀 Adverb','Describes a verb: “The kite flew gracefully.”']},
+ {type:'explore',title:'Adverbs can tell us…',items:[['🎵','How (manner)','She sang beautifully.'],['⏰','When (time)','They arrived yesterday.'],['📍','Where (place)','Please sit here.'],['🔁','How often (frequency)','He often practises.']]},
+ {type:'flow',title:'Degrees of comparison',items:[['1️⃣','POSITIVE','tall'],['2️⃣','COMPARATIVE','taller'],['3️⃣','SUPERLATIVE','tallest']]},
+ {type:'facts',title:'More comparison examples',items:['beautiful → more beautiful → most beautiful','good → better → best','bad → worse → worst','exciting → more exciting → most exciting']},
+ {type:'practice',q:'Which word is an adverb in “The goalkeeper reacted quickly”?',opts:['goalkeeper','reacted','quickly','the'],a:2,why:'“Quickly” tells us HOW the goalkeeper reacted.'},
+ {type:'note',title:'Memory answer · What is an adjective?',text:'An adjective describes a noun. Examples: bright light, happy child, difficult question.'},
+ {type:'note',title:'Memory answer · What is an adverb?',text:'An adverb tells us more about a verb, often how, when, where or how often something happens.'}
+]},
+{id:'sentences',emoji:'🧱',title:'Build strong sentences',category:'Language',time:'6 minutes',intro:'Sentences are made of ideas. Linking words help us join them clearly.',blocks:[
+ {type:'explore',title:'Useful sentence pieces',items:[['📍','Preposition','Shows place or position: in, under, next to, behind, between.'],['🔗','Conjunction','Joins words or ideas: and, but, because, so, or.'],['✏️','Simple sentence','One main idea: “The children cheered.”'],['🧩','Compound sentence','Two main ideas linked with and, but or so: “It rained, but we played.”'],['❓','Conditional clause','A condition beginning with “if”: “If it rains, we will stay inside.”']]},
+ {type:'compare',title:'Why conjunctions matter',left:['BUT = contrast','“I was tired, but I kept going.”'],right:['BECAUSE = reason','“I kept going because my team needed me.”']},
+ {type:'practice',q:'Choose the best conjunction: “The match was delayed ___ it was raining.”',opts:['because','but','under','although'],a:0,why:'“Because” gives the reason the match was delayed.'},
+ {type:'note',title:'Memory answer · What is a preposition?',text:'A preposition shows position, place, time or direction. Examples: under, above, beside, at, before.'},
+ {type:'note',title:'Memory answer · What is a conjunction?',text:'A conjunction joins words, phrases or sentences. Examples: and, but, because, or and so.'}
+]},
+{id:'punctuation',emoji:'💬',title:'Punctuation & speech',category:'Language',time:'7 minutes',intro:'Punctuation helps people understand what we mean. Speech marks show someone’s exact words.',blocks:[
+ {type:'explore',title:'Tap a punctuation mark',items:[['🔠','Capital letter','Use it at the start of a sentence and for names.'],['.','Full stop','Ends a statement.'],['?','Question mark','Ends a question.'],['!','Exclamation mark','Shows strong feelings or emphasis.'],[',','Comma','Separates items or parts of a sentence.'],['’','Apostrophe','Shows missing letters (“don’t”) or possession (“Noah’s bag”).'],['“ ”','Quotation marks','Show the exact words a person says.']]},
+ {type:'compare',title:'Direct and indirect speech',left:['🗨️ Direct speech','Mia said, “I am ready.”'],right:['📜 Indirect speech','Mia said that she was ready.']},
+ {type:'facts',title:'Remember when changing direct speech',items:['Remove the quotation marks in reported speech.','You may need to change I → he/she and am → was.','Start names and sentences with capital letters.','Place a question mark at the end of a direct question.']},
+ {type:'practice',q:'Which sentence is correctly punctuated?',opts:['where is my book asked mia','“Where is my book?” asked Mia.','“where is my book” asked Mia','Where is my book asked Mia.'],a:1,why:'The sentence starts with a capital, the spoken question has quotation marks and a question mark, and Mia has a capital letter.'},
+ {type:'note',title:'Memory answer · What is direct speech?',text:'Direct speech gives someone’s exact words inside quotation marks, such as: Tom said, “I am happy.”'},
+ {type:'note',title:'Memory answer · What is indirect speech?',text:'Indirect speech reports what someone said without quoting the exact words, such as: Tom said that he was happy.'}
+]},
+{id:'figures',emoji:'✨',title:'Figurative language',category:'Language',time:'7 minutes',intro:'Writers use special language to make words sound exciting and help readers imagine scenes.',blocks:[
+ {type:'explore',title:'Six language tricks — tap to reveal',items:[['🦊','Simile','Compares using like or as: “He ran like the wind.”'],['🌋','Metaphor','Says one thing IS another: “The classroom was a zoo.”'],['🌞','Personification','Gives human actions to non-human things: “The sun smiled.”'],['🐝','Alliteration','Words start with the same sound: “Busy bees buzzed.”'],['💥','Onomatopoeia','A sound word: bang, crash, buzz, splash.'],['💡','Proverb or idiom','A saying with a special message: “Slow and steady wins the race.”']]},
+ {type:'compare',title:'Two easy examples to remember',left:['🦁 Simile','“She was as brave as a lion.” It uses AS.'],right:['🌈 Metaphor','“Her smile was sunshine.” It says WAS.']},
+ {type:'practice',q:'What is the figure of speech in “The whispering wind wove through the trees”?',opts:['Onomatopoeia','Alliteration','A proverb','An antonym'],a:1,why:'Several nearby words begin with the same “w” sound: whispering, wind, wove.'},
+ {type:'note',title:'Memory answer · Simile versus metaphor?',text:'A simile compares things using like or as. A metaphor describes one thing as another without using like or as.'},
+ {type:'note',title:'Memory answer · What are personification and alliteration?',text:'Personification gives human qualities to non-human things. Alliteration repeats the same starting sound in nearby words.'}
+]},
+{id:'wordforms',emoji:'🔤',title:'Word families & tricky words',category:'Language',time:'6 minutes',intro:'Learn the patterns of English words so you can spot spelling and meaning tricks.',blocks:[
+ {type:'explore',title:'Six word tools',items:[['➕','Prefix','Added to the beginning: happy → unhappy; possible → impossible.'],['🔚','Suffix','Added to the end: help → helpful; quick → quickly.'],['🎵','Homophone','Same sound, different spelling or meaning: sea / see; their / there.'],['💡','Homonym','The same word has different meanings: a light bag / turn on a light.'],['🔡','Abbreviation','A shortened word: Dr = Doctor; km = kilometre.'],['📰','Articles','a, an and the. Say “an apple” but “a banana”.']]},
+ {type:'facts',title:'How to choose a or an',items:['Use “an” before a vowel sound: an egg, an umbrella.','Use “a” before a consonant sound: a dog, a school.','“The” points to a particular thing: the book on my desk.']},
+ {type:'practice',q:'Which word completes “I can ___ the sea from here”?',opts:['sea','see','sees','seen'],a:1,why:'“See” is the verb meaning to look at something; “sea” is an expanse of salt water.'},
+ {type:'note',title:'Memory answer · What is a homophone?',text:'A homophone is a word that sounds like another word but has a different spelling or meaning, such as hear and here.'},
+ {type:'note',title:'Memory answer · What is a prefix?',text:'A prefix is a group of letters added to the beginning of a word to change its meaning, such as un- in unhappy.'}
+]},
+{id:'plays',emoji:'🎭',title:'Understand plays, instructions & reports',category:'Reading',time:'7 minutes',intro:'Not all reading looks like a story. Different text types have different rules.',blocks:[
+ {type:'explore',title:'Different kinds of texts',items:[['🎬','Play script','Character names show who speaks. Stage directions in brackets tell actors what to do.'],['📋','Instructions','Give steps in the correct order, often using action verbs such as mix, cut, place.'],['🗞️','Report','Gives factual information about an event: who, what, when, where and what happened.'],['🌡️','Weather forecast','Tells us about expected conditions such as rain, temperature and wind.']]},
+ {type:'flow',title:'A clear report in three parts',items:[['📰','HEADING + INTRO','Who? What? When? Where?'],['🖊️','BODY','What happened? What details matter?'],['✅','ENDING','What was the result? What happens next?']]},
+ {type:'practice',q:'What does “(whispers)” mean in a play script?',opts:['A new character','A stage direction telling an actor how to speak','A book title','A time of day'],a:1,why:'Words in brackets are stage directions that help actors know how to perform.'},
+ {type:'note',title:'Memory answer · What are stage directions?',text:'Stage directions are instructions in a play, usually in brackets, telling actors how to move, speak or act.'},
+ {type:'note',title:'Memory answer · Name the parts of a report',text:'A report usually has a heading, an introduction, a body with important facts and a conclusion.'}
+]}
+];
+
+const flashcards = [
+['What is a setting?','The place and time where a story happens.','reading'],['What is a character?','A person or animal in a story.','reading'],['What is the plot?','The main events of a story.','reading'],['What is an inference?','A conclusion made using clues from the text.','reading'],['How do you answer an opinion question?','State your opinion and give a reason.','reading'],['What does “quote” mean in comprehension?','Copy the exact words from the text.','reading'],['What is a synonym?','A word with a similar meaning.','reading'],['What is an antonym?','A word with an opposite meaning.','reading'],['What is a target audience?','The people an advertisement aims to attract.','visual'],['What is a slogan?','A short, catchy phrase used to attract attention.','visual'],['How do you find the biggest value on a graph?','Read the headings and labels, then compare the numbers or bars.','visual'],['What does km/h stand for?','Kilometres per hour.','visual'],['What does °C mean?','Degrees Celsius.','visual'],['What is a summary?','A short version of the main ideas, in your own words.','summary'],['Should a summary include your personal opinion?','No, unless you are specifically asked for your opinion.','summary'],['What is a stage direction?','Instructions in brackets telling an actor how to perform.','reading'],['What does a report introduction say?','Who, what, when and where.','reading'],['Name the parts of a story.','Beginning, middle and ending.','reading'],['What is a common noun?','A general name such as table or dog.','language'],['What is a proper noun?','A specific name such as Noah or Cape Town.','language'],['What is an abstract noun?','An idea or feeling such as bravery.','language'],['What is a collective noun?','A name for a group such as team or flock.','language'],['What is a reflexive pronoun?','A pronoun such as himself, herself or ourselves.','language'],['What is a relative pronoun?','A pronoun such as who, which or that.','language'],['What is a verb?','A word that expresses an action or state.','language'],['Give the future tense of “They play”.','They will play.','language'],['What is subject–verb agreement?','Making sure the verb matches the subject.','language'],['What is an adjective?','A word that describes a noun.','language'],['What is an adverb?','A word that tells how, when, where or how often.','language'],['What is the superlative of “good”?','Best.','language'],['What is a conjunction?','A linking word such as and, but or because.','language'],['What is a preposition?','A word such as under, behind, between or at.','language'],['What is direct speech?','Someone’s exact words in quotation marks.','language'],['What is indirect speech?','Reporting what someone said without quotation marks.','language'],['What is a simile?','A comparison using like or as.','language'],['What is a metaphor?','A direct comparison without like or as.','language'],['What is personification?','Giving human qualities to things that are not human.','language'],['What is alliteration?','Repeating the same beginning sound in nearby words.','language'],['What is onomatopoeia?','A word that sounds like its meaning: crash, bang, buzz.','language'],['What is a homophone?','Same sound, different spelling or meaning, like sea/see.','language'],['What is a homonym?','The same word with more than one meaning, like light.','language'],['What is a prefix?','Letters added before a word to change meaning.','language'],['What is a suffix?','Letters added after a word to change meaning.','language'],['What is a gerund?','An -ing verb form used as a noun, such as Swimming is fun.','language'],['What is a conditional clause?','A clause giving a condition, often beginning with if.','language'],['What are articles?','The words a, an and the.','language']
+].map((x,i)=>({id:i,q:x[0],a:x[1],category:x[2]}));
+
+const glossary = [
+['Adjective','A word that describes a noun: the bright sun.'],['Adverb','A word that tells more about a verb: she ran quickly.'],['Alliteration','The same starting sound repeated in nearby words: busy bees buzz.'],['Antonym','A word with the opposite meaning: early / late.'],['Article','A small word used with nouns: a, an or the.'],['Author','The person who wrote a story or text.'],['Character','A person or animal in a story.'],['Clause','A group of words containing a subject and verb.'],['Collective noun','A word naming a group: flock, team, bunch.'],['Common noun','A general naming word: park, dog, book.'],['Comparative','An adjective comparing two things: bigger, more interesting.'],['Compound sentence','Two main ideas joined with words such as and, but or so.'],['Comprehension','Understanding a text and answering questions about it.'],['Conjunction','A word joining ideas: and, because, but.'],['Context clues','Words near a difficult word that help explain its meaning.'],['Direct speech','Exact words spoken by a person, inside quotation marks.'],['Fact','Something that can be checked or proved.'],['Future tense','A form telling what will happen: we will travel.'],['Gerund','An -ing word used as a noun: Reading helps you learn.'],['Heading','The title or name at the top of a section or text.'],['Homonym','A word with more than one meaning, such as light.'],['Homophone','Words sounding alike but different in spelling/meaning: hear / here.'],['Idiom','A phrase whose meaning differs from its literal words, e.g. hold your horses.'],['Inference','Something worked out from text clues and what you already know.'],['Instructions','Steps telling someone how to do something.'],['Indirect speech','Telling what someone said without quoting exact words.'],['Main idea','The most important point of a paragraph or text.'],['Metaphor','A comparison saying one thing is another: the moon is a lamp.'],['Negative form','A sentence made negative with not, never, no or another negative.'],['Noun','A naming word for a person, place, thing or idea.'],['Object','The person or thing receiving the action in a sentence.'],['Onomatopoeia','Words that copy sounds: pop, buzz, splash.'],['Opinion','What a person thinks, feels or believes.'],['Past tense','A form telling what already happened: we travelled.'],['Personification','Giving a non-human thing human actions: the wind whispered.'],['Plot','The main events that happen in a story.'],['Preposition','A word showing position, time or direction: under, in, before.'],['Present tense','A verb form for now or regular actions: she walks.'],['Prefix','Letters added to the start of a word: un- in unfair.'],['Pronoun','A word replacing or referring to a noun: he, she, they.'],['Proper noun','The specific name of a person, place or day: Cape Town.'],['Proverb','A short saying that teaches a lesson.'],['Quotation','The exact words taken from a text.'],['Reflexive pronoun','A pronoun pointing back to the subject: himself, herself.'],['Relative pronoun','A word such as who, which or that adding information.'],['Report','A factual account of an event, with a heading and organised paragraphs.'],['Setting','The place and time where a story happens.'],['Simile','A comparison using like or as: strong as an ox.'],['Slogan','A short memorable phrase used in advertisements.'],['Stage directions','Instructions in a script describing how actors move or speak.'],['Subject','The person or thing doing the action in a sentence.'],['Suffix','Letters added to the end of a word: -ful in helpful.'],['Summary','A shorter version of the most important ideas in a text.'],['Superlative','The form comparing three or more things: biggest, most careful.'],['Synonym','A word with the same or similar meaning: happy / glad.'],['Target audience','The people an advert, article or message is intended for.'],['Tense','The verb form showing time: past, present or future.'],['Theme','The main message or big idea in a story.'],['Visual literacy','Understanding information shown in pictures, adverts, charts and graphs.'],['Word count','The number of words in a piece of writing.']
+];
+
+const questions = [
+{topic:'reading',q:'Where do you look for the setting of a story?',opts:['Only at the last sentence','For clues about where and when events happen','At the page number','At the longest word'],a:1,why:'Setting means the place and time of a story.'},
+{topic:'reading',q:'What does “quote from the passage” mean?',opts:['Make up a sentence','Copy exact words from the passage','Write your opinion','Give a different ending'],a:1,why:'A quotation uses the author’s exact words.'},
+{topic:'reading',q:'Which is a fact?',opts:['Football is the best sport','The book has 120 pages','This cake is delicious','Monday is boring'],a:1,why:'The number of pages can be counted and checked.'},
+{topic:'reading',q:'If the author does not directly say a character is nervous, how can you work it out?',opts:['Use clues about the character’s actions','Look only at the title','Guess randomly','Ignore the passage'],a:0,why:'That is making an inference from clues.'},
+{topic:'reading',q:'Which answer includes a reason?',opts:['No.','Yes, because the learners helped the younger children.','I think so.','Maybe.'],a:1,why:'It includes both the opinion and an explanation.'},
+{topic:'reading',q:'What is the main character?',opts:['The person in the last paragraph only','The person or animal the story mainly follows','The author','The reader'],a:1,why:'The main character is central to the story’s action.'},
+{topic:'reading',q:'What does “frantically” mean in “He searched frantically for his keys”?',opts:['Slowly and calmly','In a worried hurry','While sleeping','Very proudly'],a:1,why:'The sentence suggests urgent, worried searching.'},
+{topic:'reading',q:'Which is the synonym of “huge”?',opts:['Tiny','Enormous','Quiet','Late'],a:1,why:'Huge and enormous have very similar meanings.'},
+{topic:'reading',q:'Which is the antonym of “arrive”?',opts:['Enter','Come','Leave','Reach'],a:2,why:'Leave is opposite in meaning to arrive.'},
+{topic:'visual',q:'What does the slogan of an advert do?',opts:['Gives the page number','Makes a catchy message memorable','Tells how many paragraphs are in a story','Names every worker'],a:1,why:'Slogans attract attention and help the message stick.'},
+{topic:'visual',q:'An advert for a children’s art workshop is most likely aimed at…',opts:['Only bus drivers','Children and their families','Only hospital staff','Only mountain climbers'],a:1,why:'The activities show who the event is designed for.'},
+{topic:'visual',q:'To find the most popular item in a bar graph, you should…',opts:['Choose the first label','Look for the largest value','Guess from the colour','Count the title letters'],a:1,why:'The largest number or longest bar shows the biggest amount.'},
+{topic:'visual',q:'What does 35 km/h tell you in a weather report?',opts:['How hot the day is','Speed, such as the wind speed','The cost of rain','The day of the month'],a:1,why:'Kilometres per hour measures speed.'},
+{topic:'visual',q:'Which details let you attend an event?',opts:['Date, venue and ticket information','Only the font','Only the colour','Only the slogan'],a:0,why:'Date, place and booking information help you decide and attend.'},
+{topic:'visual',q:'Which shows a target audience most clearly?',opts:['Words like “families welcome”','The organiser’s signature','The paper size','A full stop'],a:0,why:'“Families welcome” is an audience clue.'},
+{topic:'summary',q:'What belongs in a good summary?',opts:['Every little detail','The main ideas in your own words','Your favourite opinion','A completely different story'],a:1,why:'A summary is shorter and focuses on main ideas.'},
+{topic:'summary',q:'A summary instruction says “50–60 words”. What should you do?',opts:['Write 120 words','Ignore the limit','Count and edit to stay within the range','Write only a title'],a:2,why:'Always follow the word limit in the question.'},
+{topic:'summary',q:'Why should you not copy every sentence into a summary?',opts:['It is too short','A summary should be a shorter retelling in your own words','It changes the paper colour','It prevents punctuation'],a:1,why:'Choose the key points and paraphrase them.'},
+{topic:'language',q:'Which is a proper noun?',opts:['city','girl','Cape Town','book'],a:2,why:'Cape Town is the particular name of a place.'},
+{topic:'language',q:'Which is an abstract noun?',opts:['confidence','shoes','bottle','window'],a:0,why:'Confidence names a quality, not a physical object.'},
+{topic:'language',q:'Which is a collective noun?',opts:['flock','run','blue','happy'],a:0,why:'A flock is a group of birds.'},
+{topic:'language',q:'Choose the reflexive pronoun: “She made the card ___.”',opts:['herself','they','who','ours'],a:0,why:'Herself refers back to “she”.'},
+{topic:'language',q:'Complete: “The learner ___ won the trophy smiled.”',opts:['who','which','where','when'],a:0,why:'Who refers to a person.'},
+{topic:'language',q:'Past tense of “They run to the gate” is…',opts:['They will run to the gate','They ran to the gate','They running to the gate','They runs to the gate'],a:1,why:'Ran is the simple past tense of run.'},
+{topic:'language',q:'Future tense of “He reads” is…',opts:['He read','He will read','He reading','He reads yesterday'],a:1,why:'“Will read” shows that the action happens later.'},
+{topic:'language',q:'Which word is an adjective in “The bright moon rose”?',opts:['The','bright','moon','rose'],a:1,why:'Bright describes the noun moon.'},
+{topic:'language',q:'Which word is an adverb in “Maya spoke softly”?',opts:['Maya','spoke','softly','none'],a:2,why:'Softly tells how Maya spoke.'},
+{topic:'language',q:'What is the comparative of “careful”?',opts:['carefuller','most careful','more careful','carefulest'],a:2,why:'We say careful, more careful, most careful.'},
+{topic:'language',q:'Choose the preposition in “The shoes are under the bed.”',opts:['shoes','are','under','bed'],a:2,why:'Under shows position.'},
+{topic:'language',q:'Choose the conjunction in “I stayed home because I was sick.”',opts:['stayed','because','home','sick'],a:1,why:'Because links the reason to the action.'},
+{topic:'language',q:'Which is direct speech?',opts:['She said that she was ready.','She said, “I am ready.”','She was ready yesterday.','Someone was ready.'],a:1,why:'Direct speech quotes the exact spoken words.'},
+{topic:'language',q:'Which correctly starts a question?',opts:['where is Noah?','Where is Noah.','Where is Noah?','Where is noah!'],a:2,why:'It needs a capital letter for the question and the name, plus a question mark.'},
+{topic:'language',q:'“The leaves danced in the wind.” is an example of…',opts:['personification','homophone','article','prefix'],a:0,why:'Leaves are given a human action, dancing.'},
+{topic:'language',q:'“The brave baker baked bread.” contains…',opts:['alliteration','a synonym pair','a homophone','a future tense'],a:0,why:'Brave, baker, baked and bread begin with the same /b/ sound.'},
+{topic:'language',q:'“She was as quick as lightning.” is a…',opts:['metaphor','simile','preposition','summary'],a:1,why:'“As … as” makes this a simile.'},
+{topic:'language',q:'Which word is onomatopoeia?',opts:['beautiful','splash','before','large'],a:1,why:'Splash suggests the sound of water.'},
+{topic:'language',q:'Which pair are homophones?',opts:['dog/cat','blue/green','sea/see','run/running'],a:2,why:'Sea and see sound the same.'},
+{topic:'language',q:'What prefix makes “fair” mean the opposite?',opts:['un-','re-','pre-','-ly'],a:0,why:'Unfair means not fair.'},
+{topic:'language',q:'Choose the article: “We ate ___ apple.”',opts:['a','an','thee','some an'],a:1,why:'An is used before a vowel sound, as in apple.'},
+{topic:'language',q:'Which sentence has correct subject–verb agreement?',opts:['The children is excited.','The children are excited.','The children am excited.','The children be excited.'],a:1,why:'Children is plural, so we say are.'},
+{topic:'language',q:'What is the object in “Lebo opened the door”?',opts:['Lebo','opened','the door','none'],a:2,why:'The door receives the action of being opened.'},
+{topic:'language',q:'Which is a conditional clause?',opts:['very excited','If it rains','under the table','bright and yellow'],a:1,why:'The condition begins with “if”.'},
+{topic:'language',q:'“Swimming is my favourite sport.” Which word is a gerund?',opts:['is','favourite','sport','Swimming'],a:3,why:'Swimming is an -ing verb form used as the subject noun.'},
+{topic:'reading',q:'In a play script, words in brackets usually show…',opts:['stage directions','the writer’s surname','the ticket price','synonyms'],a:0,why:'Stage directions tell actors what to do.'},
+{topic:'reading',q:'Which part of a report answers who, what, when and where?',opts:['Introduction','Only the heading','Last word','Apostrophe'],a:0,why:'An introduction gives essential event information.'},
+{topic:'reading',q:'Instructions should usually be written…',opts:['In random order','In a clear step-by-step order','Without verbs','As one extra-long word'],a:1,why:'The reader needs the steps in order to complete the task.'}
+];
+
+// Original material created for this study app; not copied from the past papers.
+const examPassage={title:'The Lost Tournament Card',paragraphs:[
+'1. The sun had barely risen when Sam arrived at the junior golf festival with his older sister, Amina. A cool breeze swept across the practice green. It was Sam’s first time keeping score without help, and he felt as nervous as a mouse near a cat.',
+'2. On the third hole, Sam reached into his pocket and froze. His scorecard was missing. He checked his golf bag, looked beside the tee box and retraced his steps, but the card was nowhere to be found.',
+'3. Amina said calmly, “We can solve this.” She suggested asking the volunteers whether anyone had handed in a card. At the halfway table, a friendly volunteer smiled and held up a slightly crumpled scorecard. Another player had found it near the second green.',
+'4. Sam thanked the volunteer and carefully checked the scores with his playing partners. They agreed that the numbers were correct. By the end of the round, Sam was tired but proud. He had learned that staying calm and asking for help could solve a worrying problem.'
+]};
+const examAd={event:'FAMILY NATURE FUN DAY',slogan:'Explore. Discover. Protect!',date:'Sunday 22 November',place:'Green Point Community Park',cost:'Tickets: R30 adults · R15 children',contact:'Bookings: natureday@example.org',extras:'Nature trail • Art tent • Picnic games',foot:'Fictional advert made for this study challenge'};
+// Each marking criterion is worth exactly one mark. The section totals are 15 + 10 + 5 + 10 = 40.
+const examQuestions=[
+{s:'A',n:'1.1',q:'Where and when does Sam’s story begin? [2]',m:2,criteria:['At the junior golf festival / practice green.','Early in the morning, just after sunrise.'],answer:'The story begins at the junior golf festival in the early morning.'},
+{s:'A',n:'1.2',q:'Name the two main children in the story. [2]',m:2,criteria:['Sam','Amina'],answer:'Sam and his older sister, Amina.'},
+{s:'A',n:'1.3',q:'Why was Sam nervous at the beginning? [2]',m:2,criteria:['It was his first time keeping score without help.','He felt unsure or worried about doing it himself.'],answer:'He was keeping score on his own for the first time, so he felt unsure and nervous.'},
+{s:'A',n:'1.4',q:'What did Sam lose, and where was it found? [2]',m:2,criteria:['He lost his scorecard.','It was found near the second green.'],answer:'Sam lost his scorecard. Another player found it near the second green.'},
+{s:'A',n:'1.5',q:'Quote the words Amina used to reassure Sam. [1]',m:1,criteria:['Exact words: “We can solve this.”'],answer:'“We can solve this.”'},
+{s:'A',n:'1.6',q:'Name the figure of speech in “as nervous as a mouse near a cat” and explain it. [2]',m:2,criteria:['Simile','Sam felt very nervous, like a mouse near a cat.'],answer:'It is a simile because it compares how nervous Sam felt to a mouse near a cat.'},
+{s:'A',n:'1.7',q:'Do you think asking the volunteer was a good idea? Give TWO reasons. [4]',m:4,criteria:['Give a clear opinion (yes, or another reasonable view).','Mention that volunteers may help with lost things.','Explain that asking saved time or helped find the scorecard.','Support the answer with a detail from the story.'],answer:'Yes. Volunteers help at events, so they might know about lost items. Asking was faster than searching everywhere, and the volunteer had Sam’s scorecard.'},
+{s:'B',n:'2.1',q:'What event is being advertised and where is it held? [2]',m:2,criteria:['Family Nature Fun Day.','Green Point Community Park.'],answer:'Family Nature Fun Day, at Green Point Community Park.'},
+{s:'B',n:'2.2',q:'State the date of the event and the cost of one child ticket. [2]',m:2,criteria:['Sunday 22 November.','R15 for a child ticket.'],answer:'It takes place on Sunday 22 November. A child ticket costs R15.'},
+{s:'B',n:'2.3',q:'Write down the slogan and name ONE activity. [2]',m:2,criteria:['“Explore. Discover. Protect!”','Any one: nature trail, art tent or picnic games.'],answer:'The slogan is “Explore. Discover. Protect!” One activity is the nature trail.'},
+{s:'B',n:'2.4',q:'Who is the target audience, and what clue supports your answer? [2]',m:2,criteria:['Families with children / adults and children.','A clue: separate adult and child tickets, or family-friendly activities.'],answer:'It is aimed at families with children. The advert has adult and child ticket prices and child-friendly activities.'},
+{s:'B',n:'2.5',q:'Give TWO ways this advert attracts attention. [2]',m:2,criteria:['Bright design / large headline / nature symbols.','Catchy slogan / activities / clear information.'],answer:'It uses a bold heading and a catchy slogan. The activities and pictures also catch attention.'},
+{s:'C',n:'3',q:'Write a 50–60 word summary of “The Lost Tournament Card”, using the main idea of each paragraph. [5]',m:5,criteria:['Say that Sam arrived at the junior golf festival and was nervous.','Mention that his scorecard went missing.','Explain that Amina suggested asking volunteers.','Mention that the card was found and the scores were checked.','Include the lesson Sam learned; use your own concise words.'],answer:'Sam went to a junior golf festival feeling nervous about keeping score by himself. During the round, his scorecard went missing and he searched for it. Amina suggested asking the volunteers for help. A player had handed the scorecard in, and Sam checked the scores. He learned to stay calm and ask for help.'},
+{s:'D',n:'4.1',q:'Give a synonym for “nervous”. [1]',m:1,criteria:['Worried, anxious or uneasy.'],answer:'Worried / anxious.'},
+{s:'D',n:'4.2',q:'Give an antonym for “calmly”. [1]',m:1,criteria:['Nervously, anxiously or frantically.'],answer:'Nervously / frantically.'},
+{s:'D',n:'4.3',q:'Find the adjective in “a friendly volunteer”. [1]',m:1,criteria:['friendly'],answer:'Friendly.'},
+{s:'D',n:'4.4',q:'Find the adverb in “Amina spoke calmly”. [1]',m:1,criteria:['calmly'],answer:'Calmly.'},
+{s:'D',n:'4.5',q:'Rewrite with correct punctuation: where is my scorecard asked sam [1]',m:1,criteria:['Correct capitals and question mark with direct-speech punctuation.'],answer:'“Where is my scorecard?” asked Sam.'},
+{s:'D',n:'4.6',q:'Change to past tense: “Sam checks the score.” [1]',m:1,criteria:['Sam checked the score.'],answer:'Sam checked the score.'},
+{s:'D',n:'4.7',q:'Change to future tense: “Sam thanks the volunteer.” [1]',m:1,criteria:['Sam will thank the volunteer.'],answer:'Sam will thank the volunteer.'},
+{s:'D',n:'4.8',q:'Write the comparative form of “careful”. [1]',m:1,criteria:['more careful'],answer:'More careful.'},
+{s:'D',n:'4.9',q:'Find the preposition in “The card was under the table.” [1]',m:1,criteria:['under'],answer:'Under.'},
+{s:'D',n:'4.10',q:'Choose the correct homophone: “Sam could (sea / see) the green.” [1]',m:1,criteria:['see'],answer:'See.'}
+];
+
+// Fresh, original skills questions for longer quizzes and focused missions.
+const extraQuestions = [
+{topic:'reading',q:'Read: “Tariq shut his book and grinned.” How is Tariq most likely feeling?',opts:['Pleased','Frightened','Angry','Confused'],a:0,why:'The word “grinned” suggests he feels happy or pleased.'},
+{topic:'reading',q:'Read: “The trees whispered as the wind passed.” Which technique is used?',opts:['Simile','Personification','Rhyme','Alliteration'],a:1,why:'Whispering is a human action given to the trees.'},
+{topic:'reading',q:'Read: “Nandi packed her umbrella because dark clouds were gathering.” What can you infer?',opts:['It might rain','It is midnight','She is going swimming','The umbrella is broken'],a:0,why:'Dark clouds often signal rain, which explains the umbrella.'},
+{topic:'reading',q:'What is a story’s theme?',opts:['The number of pages','The main idea or message','The writer’s address','The title only'],a:1,why:'A theme is an important idea such as courage, kindness or teamwork.'},
+{topic:'reading',q:'Read: “The puppy trembled beneath the bench.” What does “trembled” suggest?',opts:['Shook a little','Jumped very high','Slept deeply','Spoke loudly'],a:0,why:'To tremble means to shake, perhaps because of fear or cold.'},
+{topic:'reading',q:'Which question asks you to make an inference?',opts:['What is the story’s title?','How many friends are named?','Why might the child have hidden the letter?','What colour is the bag?'],a:2,why:'“Might” asks you to use clues to work out an unstated reason.'},
+{topic:'reading',q:'Read: “I will be there at noon,” said the coach. Which words are spoken?',opts:['said the coach','I will be there at noon','at noon, said','the coach'],a:1,why:'The exact spoken words are inside the quotation marks.'},
+{topic:'reading',q:'Which is the best title for a paragraph about saving water at home?',opts:['Why Water Matters at Home','A Day at the Zoo','The Mystery of Space','Learning to Skate'],a:0,why:'The title should match the central idea of the paragraph.'},
+{topic:'reading',q:'Read: “By the final whistle, the team’s spirits had lifted.” What happened?',opts:['They felt happier','They became taller','They left the building','They stopped moving'],a:0,why:'“Spirits lifted” means mood or confidence improved.'},
+{topic:'reading',q:'Which detail best supports “the playground was crowded”?',opts:['Many children waited for a turn on the swings','The bell rang at three','The gate was blue','A bird sat on the wall'],a:0,why:'A long queue of children is evidence of a crowd.'},
+{topic:'reading',q:'Why does the author describe the setting?',opts:['To help readers imagine where events happen','To replace the ending','To give a dictionary definition','To remove all characters'],a:0,why:'Setting details help the reader picture the place and time.'},
+{topic:'reading',q:'Which sentence is an opinion?',opts:['The match lasted 30 minutes','The class has 28 learners','It was the most exciting match ever','The bus arrived at 8:00'],a:2,why:'Different people may disagree about what is “most exciting”.'},
+{topic:'visual',q:'An advert says “BOOK BY FRIDAY”. What is it encouraging people to do?',opts:['Reserve before a deadline','Read every Friday','Wait until Saturday','Bring a calendar only'],a:0,why:'The instruction encourages people to make a booking in time.'},
+{topic:'visual',q:'A graph shows 12 apples, 8 pears, 5 oranges and 9 bananas. Which fruit has the fewest?',opts:['Apples','Pears','Oranges','Bananas'],a:2,why:'Five oranges is the smallest number.'},
+{topic:'visual',q:'A chart shows 7 red books and 11 blue books. How many books altogether?',opts:['4','18','17','14'],a:1,why:'Add 7 and 11 to get 18.'},
+{topic:'visual',q:'Which symbol would most help readers spot a telephone number on a poster?',opts:['📞','📅','📍','🎟️'],a:0,why:'A phone symbol marks contact details.'},
+{topic:'visual',q:'A poster says “Children under 6 enter free.” What would a five-year-old pay?',opts:['The adult price','Half price','Nothing','Double price'],a:2,why:'Five is under six, so admission is free.'},
+{topic:'visual',q:'A bar chart has a bar at 25 and another at 15. What is the difference?',opts:['10','15','25','40'],a:0,why:'25 minus 15 is 10.'},
+{topic:'visual',q:'What is the purpose of a bold headline on an advert?',opts:['To hide the price','To catch attention quickly','To replace the date','To make the advert longer'],a:1,why:'A strong headline makes the main message easy to notice.'},
+{topic:'visual',q:'Which line in a notice tells you WHERE to go?',opts:['“Doors open 9:00”','“Entry R20”','“At the community hall”','“All welcome”'],a:2,why:'A venue is a place, such as the community hall.'},
+{topic:'visual',q:'A timetable says the bus leaves at 08:15 and arrives at 08:45. How long is the trip?',opts:['15 minutes','30 minutes','45 minutes','60 minutes'],a:1,why:'From 08:15 to 08:45 is 30 minutes.'},
+{topic:'visual',q:'Which title best suits a graph of how children travel to school?',opts:['Favourite Sandwiches','Ways We Travel to School','Rainfall by Month','Our Pets'],a:1,why:'A graph title should clearly describe the data shown.'},
+{topic:'summary',q:'A passage has four paragraphs. What is a useful first step before summarising?',opts:['Find the key idea of each paragraph','Copy every sentence','Add new characters','Change the topic'],a:0,why:'Identifying each paragraph’s main point helps you choose what matters.'},
+{topic:'summary',q:'Which sentence is more suitable for a brief summary?',opts:['Suddenly, the unbelievably bright, sparkly morning sun rose beautifully.','The sun rose early.','My favourite sunrise was last Saturday.','Sunshine is always better than rain.'],a:1,why:'It keeps the basic idea without unnecessary description or opinion.'},
+{topic:'summary',q:'What should you do after writing a summary?',opts:['Check the word count and main ideas','Add every example you can think of','Replace facts with opinions','Ignore the instructions'],a:0,why:'A final check ensures the summary is accurate and meets the word limit.'},
+{topic:'summary',q:'What does “in your own words” mean?',opts:['Change the meaning','Explain the same important ideas differently','Copy the first paragraph','Write only one word'],a:1,why:'Paraphrasing keeps the meaning while using your own wording.'},
+{topic:'summary',q:'Which detail would you usually leave OUT of a short summary of a rescue story?',opts:['Who needed help','What problem happened','A minor description of the rescuer’s shoes','How the problem was solved'],a:2,why:'A small clothing detail is usually less important than the main events.'},
+{topic:'summary',q:'A summary is 75 words but the instruction says 50–60. What should you do?',opts:['Remove less important details','Add a longer title','Write more examples','Leave it at 75 words'],a:0,why:'Keep the main points but shorten the wording to meet the limit.'},
+{topic:'summary',q:'Which sentence sticks to facts rather than personal opinion?',opts:['Everyone knows the trip was amazing','The class visited the museum on Tuesday','I loved the museum more than anything','Museums are boring'],a:1,why:'The museum visit and day are factual details that can be checked.'},
+{topic:'summary',q:'Which connects two events in the correct order?',opts:['First they packed; then they left','They left and had never packed before','They packed after returning','They left before they arrived home to pack'],a:0,why:'The sequence shows packing happened before departure.'},
+{topic:'language',q:'Choose the plural of “knife”.',opts:['knifes','knives','knifees','knive'],a:1,why:'Knife changes f to v before adding -es.'},
+{topic:'language',q:'Which sentence uses an apostrophe for possession?',opts:['The dogs are running.','The dog’s bowl is empty.','Dogs run fast.','The dog runs.'],a:1,why:'Dog’s shows the bowl belongs to one dog.'},
+{topic:'language',q:'Select the verb in “A bird chirped outside.”',opts:['A','bird','chirped','outside'],a:2,why:'Chirped is the action word.'},
+{topic:'language',q:'Which sentence is written in the present tense?',opts:['Mia jumped yesterday.','Mia will jump tomorrow.','Mia jumps every morning.','Mia had jumped yesterday.'],a:2,why:'“Jumps” shows an action happening regularly in the present.'},
+{topic:'language',q:'Which sentence has the correct comma?',opts:['Before school, we read.','Before, school we read.','Before school we, read.','Before school we read,'],a:0,why:'The introductory phrase “Before school” is followed by a comma.'},
+{topic:'language',q:'Choose the abstract noun.',opts:['chair','bravery','pencil','window'],a:1,why:'Bravery names a quality you cannot touch.'},
+{topic:'language',q:'Which word is a conjunction in “Although it rained, we played”?',opts:['Although','rained','played','we'],a:0,why:'Although links the ideas and shows contrast.'},
+{topic:'language',q:'What is the superlative form of “good”?',opts:['gooder','goodest','better','best'],a:3,why:'Good, better, best are the correct forms.'},
+{topic:'language',q:'Select the sentence in indirect speech.',opts:['“Stop!” shouted Dad.','Dad shouted, “Stop!”','Dad told us to stop.','“We must stop,” Dad said.'],a:2,why:'Indirect speech reports what someone said without quoting exact words.'},
+{topic:'language',q:'Which spelling is correct?',opts:['becaus','because','becose','becausse'],a:1,why:'The correct spelling is “because”.'}
+];
+
+// Three original, separate practice papers. Each has A 15, B 10, C 5 and D 10 marks.
+const examPapers=[
+{id:'p1',name:'Rookie Challenge',emoji:'🌟',need:4,passage:examPassage,advert:examAd,questions:examQuestions},
+{id:'p2',name:'Rising Star',emoji:'🚀',need:9,passage:{title:'The Day the Wind Helped',paragraphs:[
+'1. On a cool autumn morning, Lindi and her cousin Musa joined a beach care day near their town. The volunteers planned to plant small dune grasses in an area where strong winds had blown sand away. Lindi was excited but worried that the seedlings looked too delicate.',
+'2. Their team leader, Mrs Daniels, explained why the grasses mattered. As their roots grew, they would help hold the sand in place. Lindi gently pressed the first seedling into the ground, while Musa carried buckets of water. The wind tugged at their hats and rattled the empty buckets.',
+'3. Suddenly, a gust swept several loose seedlings across the sand. “Quick, the little plants!” cried Musa. The cousins collected them carefully. Instead of rushing, they asked Mrs Daniels how to protect the remaining plants. She showed them how to keep the seedlings in a sheltered box until their turn came.',
+'4. By lunchtime, the group had planted dozens of grasses. They walked back along the path so that they would not step on the new plants. Lindi looked at the neat rows and smiled. The wind had caused trouble, but it had also reminded everyone why the dunes needed care.'
+]},advert:{event:'WHEELS & HELMETS DAY',slogan:'Ride smart. Ride safe!',date:'Saturday 14 March',place:'Sunset Community Sports Field',cost:'Entry: FREE · Helmet checks: FREE',contact:'Enquiries: safetyday@example.org',extras:'Cycling track • Helmet fitting • Road-sign quiz',foot:'Fictional advert for English Quest'},questions:[
+{s:'A',n:'1.1',q:'Where and when did Lindi and Musa join the volunteers? [2]',m:2,criteria:['At a beach near their town.','On a cool autumn morning.'],answer:'They joined the beach care day on an autumn morning at a beach near their town.'},
+{s:'A',n:'1.2',q:'Name the two cousins in the story. [2]',m:2,criteria:['Lindi','Musa'],answer:'The cousins are Lindi and Musa.'},
+{s:'A',n:'1.3',q:'Why were the volunteers planting dune grass? Give TWO ideas. [2]',m:2,criteria:['To help the dunes / sand.','The roots would hold sand in place / stop it blowing away so easily.'],answer:'They were planting dune grass to protect the dunes. Its roots would help keep sand in place.'},
+{s:'A',n:'1.4',q:'What went wrong, and how did the cousins respond? [2]',m:2,criteria:['A gust blew loose seedlings across the sand.','They carefully gathered the seedlings.'],answer:'Wind blew the seedlings away, so the cousins collected them carefully.'},
+{s:'A',n:'1.5',q:'Quote Musa’s words when he noticed the seedlings. [1]',m:1,criteria:['Exact words: “Quick, the little plants!”'],answer:'“Quick, the little plants!”'},
+{s:'A',n:'1.6',q:'What does “the wind tugged at their hats” suggest? [2]',m:2,criteria:['The wind was strong / gusty.','It pulled or moved their hats.'],answer:'The wind was strong enough to pull at their hats.'},
+{s:'A',n:'1.7',q:'Do you think the cousins worked responsibly? Give your opinion and THREE supporting points. [4]',m:4,criteria:['Give a clear opinion.','They collected the seedlings carefully.','They asked Mrs Daniels for advice / used the sheltered box.','They stayed on the path to avoid the new plants / another relevant detail.'],answer:'Yes. They picked up the scattered seedlings, asked their leader how to protect them and stayed on the path so they would not damage the new grasses.'},
+{s:'B',n:'2.1',q:'What event is advertised, and where will it take place? [2]',m:2,criteria:['Wheels & Helmets Day.','Sunset Community Sports Field.'],answer:'Wheels & Helmets Day at Sunset Community Sports Field.'},
+{s:'B',n:'2.2',q:'On what date is the event, and what is the admission cost? [2]',m:2,criteria:['Saturday 14 March.','Entry is free.'],answer:'The event is on Saturday 14 March, and entry is free.'},
+{s:'B',n:'2.3',q:'Give the slogan and ONE activity. [2]',m:2,criteria:['“Ride smart. Ride safe!”','Cycling track, helmet fitting or road-sign quiz.'],answer:'“Ride smart. Ride safe!” One activity is helmet fitting.'},
+{s:'B',n:'2.4',q:'Who might enjoy this event? Give one clue. [2]',m:2,criteria:['Children / families / people who cycle.','The cycling track, helmet fitting or road-sign quiz is a clue.'],answer:'Children who ride bicycles and their families would enjoy it because there is a cycling track and helmet fitting.'},
+{s:'B',n:'2.5',q:'Explain TWO ways the advert encourages people to attend. [2]',m:2,criteria:['Strong headline / catchy safety slogan.','Free entry and activities / clear practical details.'],answer:'The catchy slogan draws attention, and free entry makes the event attractive.'},
+{s:'C',n:'3',q:'Write a 50–60 word summary of “The Day the Wind Helped”. Include the main events and message. [5]',m:5,criteria:['Say the cousins joined a beach care event.','Explain that dune grass helps hold sand in place.','Mention the gust that scattered seedlings.','Explain how the cousins helped protect and plant them.','Include the lesson about caring for the dunes; use concise own words.'],answer:'Lindi and Musa volunteered to plant grass near the beach because its roots help protect the dunes. Strong wind scattered some seedlings, but they gathered them carefully. Their leader showed them how to shelter the rest. After planting, they stayed on the path to protect their work. They learned that dunes need careful protection.'},
+{s:'D',n:'4.1',q:'Give a synonym for “delicate”. [1]',m:1,criteria:['Fragile / easily damaged / frail.'],answer:'Fragile.'},
+{s:'D',n:'4.2',q:'Give an antonym for “strong”. [1]',m:1,criteria:['Weak / gentle (for wind).'],answer:'Weak.'},
+{s:'D',n:'4.3',q:'Find the adjective in “the neat rows”. [1]',m:1,criteria:['neat'],answer:'Neat.'},
+{s:'D',n:'4.4',q:'Find the adverb in “Lindi gently pressed the seedling”. [1]',m:1,criteria:['gently'],answer:'Gently.'},
+{s:'D',n:'4.5',q:'Punctuate correctly: quick the little plants cried musa [1]',m:1,criteria:['Capitals, quotation marks, comma/exclamation mark and correct final punctuation.'],answer:'“Quick, the little plants!” cried Musa.'},
+{s:'D',n:'4.6',q:'Change to past tense: “Musa carries a bucket.” [1]',m:1,criteria:['Musa carried a bucket.'],answer:'Musa carried a bucket.'},
+{s:'D',n:'4.7',q:'Change to future tense: “Lindi plants grass.” [1]',m:1,criteria:['Lindi will plant grass.'],answer:'Lindi will plant grass.'},
+{s:'D',n:'4.8',q:'Write the comparative of “careful”. [1]',m:1,criteria:['more careful'],answer:'More careful.'},
+{s:'D',n:'4.9',q:'Find the preposition in “The box stood beside the path.” [1]',m:1,criteria:['beside'],answer:'Beside.'},
+{s:'D',n:'4.10',q:'Choose the correct homophone: “The (sea / see) was calm.” [1]',m:1,criteria:['sea'],answer:'Sea.'}
+]},
+{id:'p3',name:'English Champion',emoji:'🏆',need:14,passage:{title:'A Library for Everyone',paragraphs:[
+'1. Every Thursday, Owen visited the little library beside the sports hall. One afternoon, he noticed a handwritten sign: “Help us choose a new reading corner.” The librarian, Ms Khumalo, invited children to share ideas about how they wanted to read and learn.',
+'2. Owen imagined comfortable beanbags and a colourful rug. His friend Zola had a different suggestion. She wanted shelves low enough for younger children to reach. “A reading corner should be for everyone,” she said. Owen realised that his plan had not included the smallest readers.',
+'3. The next day, their class made a simple drawing of a new corner. They added a quiet table, a small rug, low shelves and a space for wheelchairs. The drawing was as bright as a rainbow. Ms Khumalo listened carefully and asked them to explain their choices.',
+'4. A month later, the library opened the new corner. The space was not exactly like Owen’s first idea, but it worked better for more children. When he saw a younger learner choosing a book without asking for help, Owen felt a burst of pride. Listening to others had made the plan stronger.'
+]},advert:{event:'STORIES UNDER THE STARS',slogan:'Bring a blanket. Find a story!',date:'Friday 5 June · 18:00',place:'Hillview School Courtyard',cost:'R20 per person · Under-5s free',contact:'Book: stories@example.org',extras:'Storytelling • Book swap • Warm drinks',foot:'Fictional advert for English Quest'},questions:[
+{s:'A',n:'1.1',q:'Where and when did Owen usually visit the library? [2]',m:2,criteria:['Beside the sports hall.','Every Thursday.'],answer:'Every Thursday, Owen visited the library beside the sports hall.'},
+{s:'A',n:'1.2',q:'Name Owen’s friend and the librarian. [2]',m:2,criteria:['Zola','Ms Khumalo'],answer:'His friend is Zola and the librarian is Ms Khumalo.'},
+{s:'A',n:'1.3',q:'What did Zola suggest, and why? [2]',m:2,criteria:['Lower shelves.','So younger children could reach books themselves.'],answer:'Zola suggested low shelves so that younger children could reach the books.'},
+{s:'A',n:'1.4',q:'Name TWO features in the class drawing. [2]',m:2,criteria:['Any one: quiet table, rug, low shelves, wheelchair space.','Any second, different feature from the same list.'],answer:'The drawing included a quiet table and low shelves, among other features.'},
+{s:'A',n:'1.5',q:'Quote Zola’s words about who the corner should serve. [1]',m:1,criteria:['Exact words: “A reading corner should be for everyone.”'],answer:'“A reading corner should be for everyone.”'},
+{s:'A',n:'1.6',q:'Identify and explain “as bright as a rainbow”. [2]',m:2,criteria:['Simile','The drawing was colourful / bright.'],answer:'It is a simile comparing the colourful drawing to a rainbow.'},
+{s:'A',n:'1.7',q:'Was listening to other children important? Give your opinion with THREE details. [4]',m:4,criteria:['A clear opinion.','Zola suggested accessible lower shelves.','The plan included a wheelchair space / quiet table or other inclusive feature.','More children could use the reading corner / younger learner could reach a book.'],answer:'Yes. Zola suggested low shelves, the class added space for wheelchairs and the finished corner helped a younger child choose a book independently.'},
+{s:'B',n:'2.1',q:'What is the event called, and where will it happen? [2]',m:2,criteria:['Stories Under the Stars.','Hillview School Courtyard.'],answer:'Stories Under the Stars will take place in Hillview School Courtyard.'},
+{s:'B',n:'2.2',q:'Give the event date and starting time. [2]',m:2,criteria:['Friday 5 June.','18:00 / six o’clock in the evening.'],answer:'Friday 5 June at 18:00.'},
+{s:'B',n:'2.3',q:'Write the slogan and name ONE activity. [2]',m:2,criteria:['“Bring a blanket. Find a story!”','Storytelling, book swap or warm drinks.'],answer:'“Bring a blanket. Find a story!” One activity is the book swap.'},
+{s:'B',n:'2.4',q:'What is the price for one adult and one four-year-old child? Explain. [2]',m:2,criteria:['R20 total.','Under-5s enter free, so only the adult pays.'],answer:'R20, because the adult pays R20 and the four-year-old enters free.'},
+{s:'B',n:'2.5',q:'Give TWO clues that the event is aimed at book lovers or families. [2]',m:2,criteria:['Storytelling / book swap / story-based slogan.','Child-friendly entry information / bring-a-blanket invitation.'],answer:'There will be storytelling and a book swap, and the poster invites people to bring a blanket.'},
+{s:'C',n:'3',q:'Write a 50–60 word summary of “A Library for Everyone”. Include the problem, solution and lesson. [5]',m:5,criteria:['Mention the library needed a new reading corner.','Include Owen’s first ideas.','Mention Zola’s suggestion for younger readers.','Explain how the class designed an inclusive space.','Mention that listening helped more children; concise own words.'],answer:'The librarian asked children to help plan a new reading corner. Owen first suggested a rug and beanbags, but Zola wanted low shelves for younger readers. Their class drew a space with shelves, a table and room for wheelchairs. When it opened, many children could use it independently. Owen learned why listening matters.'},
+{s:'D',n:'4.1',q:'Give a synonym for “comfortable”. [1]',m:1,criteria:['Cosy / relaxing / pleasant.'],answer:'Cosy.'},
+{s:'D',n:'4.2',q:'Give an antonym for “quiet”. [1]',m:1,criteria:['Noisy / loud.'],answer:'Noisy.'},
+{s:'D',n:'4.3',q:'Find the adjective in “a colourful rug”. [1]',m:1,criteria:['colourful'],answer:'Colourful.'},
+{s:'D',n:'4.4',q:'Find the adverb in “Ms Khumalo listened carefully”. [1]',m:1,criteria:['carefully'],answer:'Carefully.'},
+{s:'D',n:'4.5',q:'Punctuate correctly: a reading corner should be for everyone said zola [1]',m:1,criteria:['Correct capital letters, quotation marks and punctuation of direct speech.'],answer:'“A reading corner should be for everyone,” said Zola.'},
+{s:'D',n:'4.6',q:'Change to past tense: “Owen visits the library.” [1]',m:1,criteria:['Owen visited the library.'],answer:'Owen visited the library.'},
+{s:'D',n:'4.7',q:'Change to future tense: “The class draws a plan.” [1]',m:1,criteria:['The class will draw a plan.'],answer:'The class will draw a plan.'},
+{s:'D',n:'4.8',q:'Write the comparative form of “bright”. [1]',m:1,criteria:['brighter'],answer:'Brighter.'},
+{s:'D',n:'4.9',q:'Find the preposition in “The rug lay beside the shelves.” [1]',m:1,criteria:['beside'],answer:'Beside.'},
+{s:'D',n:'4.10',q:'Choose the correct homophone: “The class (knew / new) the plan was helpful.” [1]',m:1,criteria:['knew'],answer:'Knew.'}
+]}
+];
+
+const KEY='noah_english_quest_caps5_star_missions_v1';
+let data={learnerName:'',doneLessons:[],mastered:[],memoryChecks:[],wordKnown:[],bestQuiz:null,bestExam:null,textSize:0,exam:null,unlockedPapers:[],paperStates:{},bestPapers:{},quizBest:{},missedQuizIds:[]};
+try{const old=JSON.parse(localStorage.getItem(KEY)||'null');if(old&&typeof old==='object')data={...data,...old};}catch(e){}
+data.learnerName=typeof data.learnerName==='string'?data.learnerName.trim().replace(/\s+/g,' ').slice(0,32):'';
+for(const k of ['doneLessons','mastered','memoryChecks','wordKnown','unlockedPapers','missedQuizIds'])if(!Array.isArray(data[k]))data[k]=[];
+for(const k of ['paperStates','bestPapers','quizBest'])if(!data[k]||typeof data[k]!=='object'||Array.isArray(data[k]))data[k]={};
+if(data.exam&&!data.paperStates.p1)data.paperStates.p1={...data.exam};
+if(data.bestExam!==null&&data.bestPapers.p1===undefined)data.bestPapers.p1=data.bestExam;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}}
+const $=x=>document.getElementById(x);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+questions.push(...extraQuestions);
+questions.forEach((q,i)=>{q.id='question-'+i});
+let page='home',lessonIndex=0,flashFilter='all',flashIndex=0,flashFlip=false,quiz=null,quizTopic='all',quizSize=10,activeExamId=null;
+const validDoneCount=()=>lessons.filter(l=>data.doneLessons.includes(l.id)).length;
+function unlocked(id){return data.unlockedPapers.includes(id)}
+function refreshUnlocks(){
+ const count=validDoneCount();let fresh=[];
+ if(data.paperStates.p1||data.bestExam!==null)fresh.push('p1'); // Previous app users keep access.
+ for(const p of examPapers)if(count>=p.need)fresh.push(p.id);
+ const gained=fresh.filter(id=>!data.unlockedPapers.includes(id));
+ if(gained.length){data.unlockedPapers=[...new Set([...data.unlockedPapers,...fresh])];save()}
+ return gained;
+}
+refreshUnlocks();
+const quizTopics=[['all','🌈 All topics'],['reading','📖 Reading'],['visual','📊 Visual literacy'],['summary','📝 Summary'],['language','🧠 Language'],['mistakes','🎯 Mistake Mission']];
+const MEMORY_POINTS=5,WORD_POINTS=2;
+const memoryKeys=lessons.flatMap(l=>l.blocks.map((b,i)=>b.type==='note'&&b.title.startsWith('Memory answer')?l.id+'-'+i:null).filter(Boolean));
+const wordKey=word=>String(word).trim().toLowerCase();
+const wordKeys=glossary.map(x=>wordKey(x[0]));
+const MAX_LESSON_STARS=memoryKeys.length*MEMORY_POINTS,MAX_WORD_STARS=wordKeys.length*WORD_POINTS;
+const MAX_STARS=MAX_LESSON_STARS+MAX_WORD_STARS;
+const countMemory=()=>memoryKeys.filter(x=>data.memoryChecks.includes(x)).length;
+const countWords=()=>wordKeys.filter(x=>data.wordKnown.includes(x)).length;
+const memoryPoints=()=>countMemory()*MEMORY_POINTS,wordPoints=()=>countWords()*WORD_POINTS;
+const stars=()=>memoryPoints()+wordPoints();
+const sectionLabel={A:'Reading comprehension',B:'Visual literacy',C:'Summary',D:'Language'};
+// Name customization uses the same saved-progress record as previous versions.
+// The learner can edit the display name without losing earned stars or unlocked papers.
+function updateLearnerName(){
+ const name=data.learnerName;
+ $('appBrand').textContent=name?(name.toLocaleUpperCase('en-ZA')+'’S ENGLISH ADVENTURE'):'ENGLISH ADVENTURE';
+ $('learnerButtonName').textContent=name||'Your name';
+ $('learnerBtn').setAttribute('aria-label',name?'Change learner name. Current name: '+name:'Add your learner name');
+ $('heroGreeting').textContent=name?'Ready for your next mission, '+name+'?':'Welcome, adventurer!';
+ $('learningTipTitle').textContent='🌟 '+(name?name+'’s':'Your')+' learning trick';
+ $('footerLearner').textContent=name?'Created for '+name:'Your English Adventure';
+ document.title=(name?name+'’s ':'')+'English Adventure · Star Missions | Grade 5 CAPS';
+}
+let namingFirstTime=false;
+function openNameEditor(firstTime=false){
+ namingFirstTime=firstTime;
+ $('nameDialogTitle').textContent=firstTime?'What’s your name, adventurer?':'Edit your learner name';
+ $('nameDialogDescription').textContent=firstTime?'Tell us your first name so we can make this adventure yours!':'What name should appear on your English Adventure?';
+ $('saveLearnerName').textContent=firstTime?'🌟 Start my adventure':'✓ Save my name';
+ $('cancelLearnerName').hidden=firstTime;
+ $('learnerNameInput').value=data.learnerName;
+ $('learnerNameInput').setCustomValidity('');
+ const dialog=$('learnerDialog');
+ if(typeof dialog.showModal==='function'){
+  if(!dialog.open)dialog.showModal();
+ }else dialog.setAttribute('open','');
+ $('learnerNameInput').focus();
+}
+function closeNameEditor(){
+ const dialog=$('learnerDialog');
+ if(typeof dialog.close==='function'&&dialog.open)dialog.close();
+ else dialog.removeAttribute('open');
+}
+$('learnerBtn').addEventListener('click',()=>openNameEditor(false));
+$('cancelLearnerName').addEventListener('click',closeNameEditor);
+$('learnerDialog').addEventListener('cancel',e=>{if(namingFirstTime)e.preventDefault()});
+$('learnerNameInput').addEventListener('input',()=>$('learnerNameInput').setCustomValidity(''));
+$('learnerForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const name=$('learnerNameInput').value.trim().replace(/\s+/g,' ').slice(0,32);
+ if(!name){$('learnerNameInput').setCustomValidity('Please enter your name.');$('learnerNameInput').reportValidity();return;}
+ data.learnerName=name;save();updateLearnerName();closeNameEditor();
+ toast('🌟 Welcome to English Adventure, '+name+'!');
+});
+function toast(message){const el=$('statusToast');el.innerHTML=`<div class="memory-toast" role="status">${esc(message)}</div>`;clearTimeout(toast.timer);toast.timer=setTimeout(()=>{el.innerHTML=''},2300);}
+function updateTop(){
+ $('progressPill').textContent=data.doneLessons.filter(x=>lessons.some(l=>l.id===x)).length+'/'+lessons.length+' lessons';
+ $('pointPill').textContent='⭐ '+stars()+' / '+MAX_STARS;
+ $('pointPill').setAttribute('aria-label',stars()+' of '+MAX_STARS+' stars collected');
+}
+function go(p){
+ page=p;document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!=='page-'+p);
+ document.querySelectorAll('.nav button').forEach(b=>{const active=b.dataset.page===p;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
+ if(p==='home')renderHome();if(p==='lessons')renderLessons();if(p==='flashcards')renderFlashcards();if(p==='quiz')renderQuiz();if(p==='exam')renderExam();if(p==='glossary')renderGlossary();
+ window.scrollTo({top:0,behavior:'instant'});
+}
+document.querySelectorAll('[data-page]').forEach(btn=>btn.addEventListener('click',()=>go(btn.dataset.page)));
+document.addEventListener('click',e=>{let b=e.target.closest('[data-go]');if(b)go(b.dataset.go)});
+$('fontBtn').addEventListener('click',()=>{data.textSize=((Number(data.textSize)||0)+1)%3;setFont();save()});
+function setFont(){const i=Math.max(0,Math.min(2,Number(data.textSize)||0));document.documentElement.style.setProperty('--font-size',[17,19,21][i]+'px');$('fontBtn').textContent=['A+','A++','A'][i]}
+setFont();
+function renderHome(){
+ updateTop();$('statLessons').textContent=data.doneLessons.filter(x=>lessons.some(l=>l.id===x)).length+' / '+lessons.length;
+ $('homeProgress').style.width=100*data.doneLessons.filter(x=>lessons.some(l=>l.id===x)).length/lessons.length+'%';
+ $('statCards').textContent=flashcards.filter(c=>data.mastered.includes(c.id)).length+' / '+flashcards.length;
+ $('statQuiz').textContent=data.bestQuiz===null?'—':data.bestQuiz+' / 10';
+ $('statPoints').textContent=stars()+' / '+MAX_STARS+' ⭐';
+ $('statMemory').textContent=countMemory()+'/'+memoryKeys.length+' lesson answers · '+countWords()+'/'+wordKeys.length+' words';
+ $('starProgress').style.width=(100*stars()/MAX_STARS)+'%';
+ $('starMissionTotal').textContent=stars()+' / '+MAX_STARS+' ⭐';
+ $('lessonStarGoal').textContent=memoryPoints()+' / '+MAX_LESSON_STARS+' ⭐';
+ $('lessonStarProgress').style.width=(100*memoryPoints()/MAX_LESSON_STARS)+'%';
+ $('wordStarGoal').textContent=wordPoints()+' / '+MAX_WORD_STARS+' ⭐';
+ $('wordStarProgress').style.width=(100*wordPoints()/MAX_WORD_STARS)+'%';
+ const next=examPapers.find(p=>!unlocked(p.id));
+ $('unlockHome').innerHTML= next?`<div class="card" style="padding:21px"><div class="row wraprow" style="justify-content:space-between"><div><span class="eyebrow">NEXT PRACTICE PAPER</span><h3 style="margin:6px 0">🔒 ${esc(next.name)}</h3><p class="small muted">Finish ${Math.max(0,next.need-validDoneCount())} more ${next.need-validDoneCount()===1?'lesson':'lessons'} to unlock it.</p></div><button type="button" class="btn primary sm" data-go="exam">See all papers →</button></div><div class="progress" style="margin-top:13px"><span style="width:${Math.min(100,100*validDoneCount()/next.need)}%"></span></div><p class="tiny muted" style="margin-top:7px">${validDoneCount()} / ${next.need} lessons completed for the next paper</p></div>`:`<div class="tip green"><b>🏆 All three practice papers unlocked!</b><p>You completed enough lessons to earn all your practice-paper missions.</p></div>`;
+}
+function adHTML(a){return `<div class="ad-sample" aria-label="Sample advertisement"><div class="eyebrow" style="color:#ffe8ab">🌿 JOIN THE FUN</div><h4>${esc(a.event)}</h4><p class="ad-slogan">${esc(a.slogan)}</p><p class="small">${esc(a.extras)}</p><div style="margin:14px 0"><span class="ad-detail">📅 ${esc(a.date)}</span><span class="ad-detail">📍 ${esc(a.place)}</span><span class="ad-detail">🎟️ ${esc(a.cost)}</span></div><p class="strong">${esc(a.contact)}</p><p class="ad-note">${esc(a.foot)}</p></div>`}
+function blockHTML(b,lid,i){switch(b.type){
+case 'flow':return `<div class="info-block"><h3>${esc(b.title)}</h3><div class="mini-grid">${b.items.map(x=>`<div class="mini-item"><span class="big">${esc(x[0])}</span><strong>${esc(x[1])}</strong><span>${esc(x[2])}</span></div>`).join('')}</div></div>`;
+case 'explore':return `<div class="info-block"><h3>${esc(b.title)}</h3><div class="discovery-grid">${b.items.map(x=>`<details class="discovery-card"><summary><span class="discovery-emoji">${esc(x[0])}</span><span class="discovery-label">${esc(x[1])}</span><span class="discovery-chevron" aria-hidden="true">⌄</span></summary><p>${esc(x[2])}</p></details>`).join('')}</div></div>`;
+case 'facts':return `<div class="info-block"><h3>${esc(b.title)}</h3><ul class="factlist">${b.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
+case 'compare':return `<div class="info-block"><h3>${esc(b.title)}</h3><div class="compare"><div><h4>${esc(b.left[0])}</h4><p>${esc(b.left[1])}</p></div><div><h4>${esc(b.right[0])}</h4><p>${esc(b.right[1])}</p></div></div></div>`;
+case 'passage':return `<div class="info-block"><h3>${esc(b.title)}</h3><div class="reading-story"><p>${esc(b.text)}</p></div></div>`;
+case 'ad':return `<div class="info-block"><h3>${esc(b.title)}</h3>${adHTML(b)}</div>`;
+case 'chart':{const mx=Math.max(...b.items.map(x=>x[1]));return `<div class="info-block"><h3>${esc(b.title)}</h3><div class="bar-chart" role="img" aria-label="${esc(b.title)}: ${esc(b.items.map(x=>x[0]+': '+x[1]).join(', '))}">${b.items.map(x=>`<div class="bar-line"><strong>${esc(x[0])}</strong><div class="bar-track"><div class="bar-fill" style="width:${100*x[1]/mx}%"></div></div><strong>${x[1]}</strong></div>`).join('')}</div></div>`}
+case 'practice':return `<div class="info-block lesson-practice"><div class="eyebrow">⚡ QUICK CHECK</div><h3 style="margin:8px 0 15px">${esc(b.q)}</h3><div class="choices">${b.opts.map((opt,j)=>`<button type="button" class="choice" data-practice="${i}" data-option="${j}"><span class="letter">${'ABCD'[j]}</span>${esc(opt)}</button>`).join('')}</div><div class="practice-feedback" role="status"></div></div>`;
+case 'note':{
+ const key=lid+'-'+i,done=data.memoryChecks.includes(key);
+ return `<details class="note memory-note"><summary><span>⭐ ${esc(b.title)}</span><span class="reveal-cue">Tap to reveal ⌄</span></summary><div class="memory-answer"><p>${esc(b.text)}</p><label class="memory-check ${done?'is-done':''}"><input type="checkbox" data-memory="${esc(key)}" ${done?'checked':''}><span class="checkbox-text">✓ I have memorised this!</span><span class="point-reward">${done?'⭐ 5 stars earned':'+5 ⭐ stars'}</span></label><p class="tiny muted">Can you explain it with the answer hidden? Tick only when you can. You can untick to practise again.</p></div></details>`}
+default:return ''}}
+function renderLessons(){
+ updateTop();
+ $('lessonMenu').innerHTML=lessons.map((l,i)=>`<button type="button" class="${i===lessonIndex?'active':''}" data-lesson="${i}" ${i===lessonIndex?'aria-current="true"':''}><span class="num">${i+1}</span><span>${esc(l.title)}</span>${data.doneLessons.includes(l.id)?'<span class="check" aria-label="Finished">✓</span>':''}</button>`).join('');
+ const l=lessons[lessonIndex];
+ $('lessonPanel').innerHTML=`<span class="tag">${esc(l.category)} · ${esc(l.time)}</span><h2 class="lesson-title">${l.emoji} ${esc(l.title)}</h2><p class="lesson-intro">${esc(l.intro)}</p>${l.blocks.map((b,i)=>blockHTML(b,l.id,i)).join('')}<div class="lesson-actions"><button type="button" class="btn ${data.doneLessons.includes(l.id)?'soft':'teal'}" id="lessonDone">${data.doneLessons.includes(l.id)?'✓ Lesson finished · Untick':'✓ I understand this lesson'}</button><button class="btn ghost" type="button" id="speakLesson">🔊 Read lesson aloud</button><button class="btn ghost" type="button" id="nextLesson">Next lesson →</button></div>`;
+ $('lessonMenu').querySelectorAll('[data-lesson]').forEach(b=>b.onclick=()=>{lessonIndex=Number(b.dataset.lesson);renderLessons();$('lessonPanel').scrollIntoView({behavior:'smooth',block:'start'})});
+ $('lessonPanel').querySelectorAll('[data-practice]').forEach(btn=>btn.addEventListener('click',()=>{
+ const b=l.blocks[Number(btn.dataset.practice)],chosen=Number(btn.dataset.option),parent=btn.closest('.lesson-practice');
+ parent.querySelectorAll('[data-option]').forEach(x=>{const j=Number(x.dataset.option);x.disabled=true;x.classList.toggle('correct',j===b.a);x.classList.toggle('wrong',j===chosen&&j!==b.a)});
+ parent.querySelector('.practice-feedback').innerHTML=`<div class="feedback ${chosen===b.a?'':'bad'}"><h3>${chosen===b.a?'✅ Well done!':'💡 Good try!'}</h3><p>${esc(b.why)}</p><button type="button" class="btn ghost sm" data-retry="${Number(btn.dataset.practice)}" style="margin-top:12px">Try again</button></div>`;
+ parent.querySelector('[data-retry]').onclick=()=>{parent.querySelectorAll('[data-option]').forEach(x=>{x.disabled=false;x.classList.remove('correct','wrong')});parent.querySelector('.practice-feedback').innerHTML=''};
+ }));
+ $('lessonPanel').querySelectorAll('[data-memory]').forEach(box=>box.addEventListener('change',()=>{
+ const key=box.dataset.memory,prior=data.memoryChecks.includes(key);
+ if(box.checked&&!prior)data.memoryChecks.push(key);else if(!box.checked&&prior)data.memoryChecks=data.memoryChecks.filter(x=>x!==key);
+ box.closest('.memory-check').classList.toggle('is-done',box.checked);
+ box.closest('.memory-check').querySelector('.point-reward').textContent=box.checked?'⭐ 5 stars earned':'+5 ⭐ stars';
+ save();updateTop();if(box.checked&&!prior)toast('⭐ +5 memory stars!')
+ }));
+ $('lessonPanel').querySelectorAll('[data-retry]').forEach(b=>b.onclick=renderLessons);
+ $('lessonDone').onclick=()=>{const yes=data.doneLessons.includes(l.id);data.doneLessons=yes?data.doneLessons.filter(x=>x!==l.id):[...data.doneLessons,l.id];save();const gains=refreshUnlocks();renderLessons();if(gains.length){toast('🏆 '+examPapers.find(x=>x.id===gains[0]).name+' unlocked!')}else if(!yes)toast('📚 Mission finished!')};
+ $('nextLesson').onclick=()=>{lessonIndex=(lessonIndex+1)%lessons.length;renderLessons();$('lessonPanel').scrollIntoView({behavior:'smooth',block:'start'})};
+ $('speakLesson').onclick=()=>{
+ if(!('speechSynthesis' in window)){toast('Read aloud is not available in this browser.');return}
+ if(window.speechSynthesis.speaking){window.speechSynthesis.cancel();$('speakLesson').textContent='🔊 Read lesson aloud';return}
+ const parts=[l.title,l.intro,...l.blocks.filter(x=>x.type==='facts').flatMap(x=>x.items),...l.blocks.filter(x=>x.type==='compare').flatMap(x=>[x.left[0],x.left[1],x.right[0],x.right[1]])];
+ const u=new SpeechSynthesisUtterance(parts.join('. '));u.lang='en-ZA';u.rate=.88;u.onend=()=>$('speakLesson').textContent='🔊 Read lesson aloud';window.speechSynthesis.speak(u);$('speakLesson').textContent='⏹️ Stop reading'
+ };
+}
+function filteredCards(){return flashFilter==='all'?flashcards:flashcards.filter(c=>c.category===flashFilter)}
+function renderFlashcards(){
+ const opts=[['all','All cards'],['reading','📖 Reading'],['visual','📊 Visuals'],['language','🧠 Language'],['summary','📝 Summary']];
+ $('flashFilters').innerHTML=opts.map(x=>`<button type="button" data-filter="${x[0]}" class="${flashFilter===x[0]?'active':''}">${x[1]}</button>`).join('');
+ $('flashFilters').querySelectorAll('button').forEach(b=>b.onclick=()=>{flashFilter=b.dataset.filter;flashIndex=0;flashFlip=false;renderFlashcards()});
+ const cards=filteredCards();if(flashIndex>=cards.length)flashIndex=0;
+ const c=cards[flashIndex],known=data.mastered.includes(c.id);
+ $('flashContent').innerHTML=`<button class="flashCard ${flashFlip?'is-back':''}" id="flipCard" type="button" aria-label="${flashFlip?'Answer shown. Tap for question':'Question shown. Tap for answer'}"><span class="cardtop">${flashFlip?'ANSWER':'QUESTION'} · ${flashIndex+1} OF ${cards.length}</span><span class="prompt">${esc(flashFlip?c.a:c.q)}</span><span class="hint">${flashFlip?'Tap to see the question again':'Tap to reveal the answer ✨'}</span></button><div class="flashControls"><button class="btn ghost" id="prevCard" type="button">← Previous</button><button class="btn ${known?'soft':'teal'}" id="masterCard" type="button">${known?'✓ I know this':'☆ I know this!'}</button><button class="btn primary" id="nextCard" type="button">Next →</button></div><p class="card-meter">${cards.filter(x=>data.mastered.includes(x.id)).length} of ${cards.length} learnt in this set · ${data.mastered.filter(x=>flashcards.some(c=>c.id===x)).length} total</p>`;
+ $('flipCard').onclick=()=>{flashFlip=!flashFlip;renderFlashcards()};
+ $('prevCard').onclick=()=>{flashIndex=(flashIndex-1+cards.length)%cards.length;flashFlip=false;renderFlashcards()};
+ $('nextCard').onclick=()=>{flashIndex=(flashIndex+1)%cards.length;flashFlip=false;renderFlashcards()};
+ $('masterCard').onclick=()=>{data.mastered=known?data.mastered.filter(x=>x!==c.id):[...data.mastered,c.id];save();renderFlashcards()};
+}
+function shuffle(xs){const a=xs.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function quizPool(){return quizTopic==='all'?questions:quizTopic==='mistakes'?questions.filter(q=>data.missedQuizIds.includes(q.id)):questions.filter(q=>q.topic===quizTopic)}
+function quizCount(){const n=quizPool().length;return quizSize==='all'?n:Math.min(Number(quizSize),n)}
+function startQuiz(){
+ const pool=quizPool();if(!pool.length){renderQuiz();return}
+ const n=quizCount();let items;
+ if(quizTopic==='all'&&n===10){
+  items=shuffle([
+   ...shuffle(pool.filter(q=>q.topic==='reading')).slice(0,3),
+   ...shuffle(pool.filter(q=>q.topic==='visual')).slice(0,2),
+   ...shuffle(pool.filter(q=>q.topic==='summary')).slice(0,1),
+   ...shuffle(pool.filter(q=>q.topic==='language')).slice(0,4)]);
+ }else if(quizTopic==='all'&&n<pool.length){
+  // Choose varied categories for longer mixed challenges.
+  const cats=['reading','visual','summary','language'];const buckets=Object.fromEntries(cats.map(c=>[c,shuffle(pool.filter(q=>q.topic===c))]));
+  const picked=[];
+  while(picked.length<n){
+   let took=false;
+   for(const c of shuffle(cats)){if(buckets[c].length&&picked.length<n){picked.push(buckets[c].shift());took=true}}
+   if(!took)break;
+  }
+  items=shuffle(picked);
+ }else items=shuffle(pool).slice(0,n);
+ quiz={items,i:0,score:0,choice:null,topic:quizTopic,requested:quizSize,key:quizTopic+':'+quizSize};
+ renderQuiz();
+}
+function renderQuiz(){
+ const el=$('quizContent');
+ if(!quiz){
+  const pool=quizPool();const actual=quizCount();const stored=data.quizBest[quizTopic+':'+quizSize];
+  el.innerHTML=`<div class="card quest-settings"><div class="tag goldtag">🎯 BUILD YOUR QUIZ MISSION</div><h3 style="margin:11px 0 5px">What would you like to practise?</h3><p class="muted">All quizzes stay open, even while you work towards the practice papers.</p>
+  <fieldset><legend>1. Choose your topic</legend><div class="quest-options" id="topicOptions">${quizTopics.map(x=>`<button type="button" data-topic="${x[0]}" class="${quizTopic===x[0]?'active':''}" aria-pressed="${quizTopic===x[0]}">${x[1]}</button>`).join('')}</div></fieldset>
+  <fieldset><legend>2. Choose your quiz length</legend><div class="quest-options" id="lengthOptions">${[10,20,30,'all'].map(n=>`<button type="button" data-length="${n}" class="${String(quizSize)===String(n)?'active':''}" aria-pressed="${String(quizSize)===String(n)}">${n==='all'?'All available':n+' questions'}</button>`).join('')}</div></fieldset>
+  <div class="tip green"><b>${quizTopic==='mistakes'?'🎯 Mistake Mission': '⭐ Ready for a challenge?'}</b><p>${pool.length?`You'll get <b>${actual} ${actual===1?'question':'questions'}</b>${quizTopic==='all'?' from a mixture of skills':quizTopic==='mistakes'?' from your previous mistakes':' on this topic'}. ${pool.length<Number(quizSize)?'This topic has fewer questions than your selection.':''}`:'No missed questions yet! Try another quiz first, and any tricky questions will appear here.'}</p></div>
+  <p class="quest-note">${quizTopic==='mistakes'?'Get a tricky question right to clear it from Mistake Mission.':'Wrong answers are saved for Mistake Mission. Questions can change each time you play.'}</p>
+  ${stored!==undefined?`<p class="small muted">Best for this choice: <b>${stored.score} / ${stored.total}</b></p>`:''}
+  <button type="button" class="btn teal" id="startQuiz" ${!pool.length?'disabled':''} style="margin-top:15px">Start ${actual}-question mission →</button></div>`;
+  el.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>{quizTopic=b.dataset.topic;renderQuiz()});
+  el.querySelectorAll('[data-length]').forEach(b=>b.onclick=()=>{quizSize=b.dataset.length==='all'?'all':Number(b.dataset.length);renderQuiz()});
+  const b=$('startQuiz');if(b)b.onclick=startQuiz;return;
+ }
+ const total=quiz.items.length;
+ if(quiz.i>=total){
+  const win=quiz.score,prior=data.quizBest[quiz.key];
+  if(!prior||win/total>prior.score/prior.total||(win/total===prior.score/prior.total&&win>prior.score)){
+   data.quizBest[quiz.key]={score:win,total};
+  }
+  if(quiz.topic==='all'&&total===10&&(data.bestQuiz===null||win>data.bestQuiz))data.bestQuiz=win;
+  save();
+  const best=data.quizBest[quiz.key];
+  el.innerHTML=`<div class="card result"><div class="medal">${win===total?'🏆':win>=total*.7?'🌟':'📚'}</div><div class="eyebrow">ADVENTURE COMPLETE</div><div class="grade">${win} / ${total}</div><h2>${win===total?'Perfect score!':win>=total*.7?'Great work!':'Every try makes you stronger!'}</h2><p class="muted" style="margin:13px 0">Best for this challenge: ${best.score} / ${best.total}</p><p class="small muted" style="margin-bottom:19px">${data.missedQuizIds.length} ${data.missedQuizIds.length===1?'question':'questions'} in your Mistake Mission.</p><div class="row wraprow" style="justify-content:center"><button class="btn teal" id="replayQuiz" type="button">Try another round →</button><button class="btn ghost" id="changeQuiz" type="button">Choose a different quiz</button>${data.missedQuizIds.length?'<button class="btn gold" id="mistakeQuiz" type="button">🎯 Mistake Mission</button>':''}</div></div>`;
+  $('replayQuiz').onclick=startQuiz;
+  $('changeQuiz').onclick=()=>{quiz=null;renderQuiz()};
+  if($('mistakeQuiz'))$('mistakeQuiz').onclick=()=>{quiz=null;quizTopic='mistakes';quizSize='all';renderQuiz()};
+  return;
+ }
+ const q=quiz.items[quiz.i],locked=quiz.choice!==null,correct=locked&&quiz.choice===q.a;
+ const label={reading:'Reading',visual:'Visual literacy',summary:'Summary',language:'Language'}[q.topic];
+ el.innerHTML=`<div class="card quizCard"><div class="row wraprow" style="justify-content:space-between"><span class="tag">${label}</span><span class="small strong">QUESTION ${quiz.i+1} OF ${total}</span></div><div class="progress" style="margin-top:18px"><span style="width:${100*(quiz.i+1)/total}%"></span></div><h3 class="question">${esc(q.q)}</h3><div class="choices">${q.opts.map((opt,j)=>`<button class="choice ${locked&&j===q.a?'correct':''} ${locked&&j===quiz.choice&&!correct?'wrong':''}" data-choice="${j}" type="button" ${locked?'disabled':''}><span class="letter">${'ABCD'[j]}</span>${esc(opt)}</button>`).join('')}</div>${locked?`<div class="feedback ${correct?'':'bad'}" role="status"><h3>${correct?'✅ Excellent!':'💡 Learn this one!'}</h3><p>${esc(q.why)}</p></div>`:''}<div class="quizFoot"><span class="small muted">Score so far: ${quiz.score}</span>${locked?`<button class="btn primary" id="quizNext" type="button">${quiz.i===total-1?'See results 🏁':'Next question →'}</button>`:'<span class="small muted">Choose your answer</span>'}</div></div>`;
+ if(!locked)el.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>{
+  quiz.choice=Number(b.dataset.choice);const wasWrong=data.missedQuizIds.includes(q.id);
+  if(quiz.choice===q.a){quiz.score++;if(wasWrong)data.missedQuizIds=data.missedQuizIds.filter(x=>x!==q.id)}
+  else if(!wasWrong)data.missedQuizIds.push(q.id);
+  save();renderQuiz();
+ });
+ else $('quizNext').onclick=()=>{quiz.i++;quiz.choice=null;renderQuiz();window.scrollTo({top:0,behavior:'smooth'})};
+}
+
+function currentPaper(){return examPapers.find(p=>p.id===activeExamId)}
+function currentPaperState(){return data.paperStates[activeExamId]}
+function examStoryHTML(p){return `<div class="reading-story"><h3 style="margin-bottom:10px">${esc(p.passage.title)}</h3>${p.passage.paragraphs.map(x=>`<p>${esc(x)}</p>`).join('')}</div>`}
+function examContext(s,p){
+ if(s==='A'||s==='C')return `<div class="exam-context"><details open><summary>📖 Read / reopen the story ⌄</summary>${examStoryHTML(p)}</details></div>`;
+ if(s==='B')return `<div class="exam-context"><details open><summary>📢 Read / reopen the advertisement ⌄</summary>${adHTML(p.advert)}</details></div>`;
+ return '';
+}
+function initExam(){
+ if(!currentPaper()||!unlocked(activeExamId))return;
+ data.paperStates[activeExamId]={stage:'running',i:0,answers:{},marks:{},checks:{},reveal:false};save();renderExam();
+}
+function examTotal(st){return Object.values(st?.marks||{}).reduce((sum,n)=>sum+Number(n||0),0)}
+function examCriteria(q,i,st){const selected=st.checks[i]||[];return `<fieldset class="marking-guide"><legend>📝 Check the facts you included</legend><p class="mark-instructions">Each tick is worth 1 mark. Only award yourself a mark for an idea in your own answer. Your wording may be different.</p><div class="mark-criteria">${q.criteria.map((text,j)=>`<label class="criterion"><input type="checkbox" data-criterion="${j}" ${selected.includes(j)?'checked':''}><span class="criterion-text">${esc(text)}</span><span class="one-mark">+1 mark</span></label>`).join('')}</div><div class="mark-summary"><strong>Marks for this question</strong><span class="earned-number" id="earnedNumber">${st.marks[i]||0} / ${q.m}</span></div></fieldset>`}
+function openPaper(id){
+ if(!unlocked(id)){toast('🔒 Complete more lessons to unlock this paper.');return}
+ activeExamId=id;renderExam();window.scrollTo({top:0,behavior:'smooth'});
+}
+function renderExam(){
+ const el=$('examContent'),p=currentPaper(),st=currentPaperState();
+ if(!p){
+ const count=validDoneCount(),next=examPapers.find(x=>!unlocked(x.id));
+ el.innerHTML=`<div class="card" style="padding:22px;margin-bottom:17px"><div class="row wraprow" style="justify-content:space-between"><div><div class="eyebrow">MISSION PROGRESS</div><h3 style="margin:6px 0">📚 ${count} / ${lessons.length} lessons completed</h3><p class="small muted">${next?`Only ${next.need-count} more ${next.need-count===1?'lesson':'lessons'} to unlock ${esc(next.name)}.`:'You have unlocked all the practice papers! Well done.'}</p></div><button class="btn ghost sm" type="button" id="goStudy">📖 Study lessons →</button></div><div class="progress" style="margin-top:14px"><span style="width:${100*count/lessons.length}%"></span></div></div>
+ <div class="grid3">${examPapers.map(x=>{
+ const open=unlocked(x.id),remaining=Math.max(0,x.need-count),state=data.paperStates[x.id],best=data.bestPapers[x.id];
+ return `<div class="unlock-card ${open?'':'locked'}"><div class="row" style="justify-content:space-between;align-items:start"><div class="unlock-icon">${open?x.emoji:'🔒'}</div><span class="unlock-tag">${open?'UNLOCKED':'LOCKED'}</span></div><h3>Paper ${x.id.slice(1)} · ${esc(x.name)}</h3><p>40 marks · Reading, visuals, summary and grammar</p><div class="progress"><span style="width:${Math.min(100,100*count/x.need)}%"></span></div><p class="small muted">${open?`${x.need} lesson milestone achieved`: `${count} / ${x.need} lessons · ${remaining} to go`}</p>${open&&best!==undefined?`<p class="small strong" style="margin-top:8px">🏅 Best: ${best} / 40</p>`:''}<div class="unlock-footer"><button class="btn ${open?'teal':'ghost'} sm" type="button" data-paper="${x.id}" ${open?'':'disabled'}>${open?(state?.stage==='running'?'Continue paper →':state?.stage==='finished'?'View results / retry →':'Start paper →'):'🔒 Finish more lessons'}</button></div></div>`}).join('')}</div>
+ <div class="tip green section-space"><b>🧠 Different texts, different challenges</b><p>Each paper has its own reading story, advertisement and language questions. You can redo unlocked papers and improve your best mark.</p></div>`;
+ $('goStudy').onclick=()=>go('lessons');
+ el.querySelectorAll('[data-paper]').forEach(b=>b.onclick=()=>openPaper(b.dataset.paper));
+ return;
+ }
+ if(!unlocked(activeExamId)){activeExamId=null;renderExam();return}
+ const questionsForPaper=p.questions;
+ const back='<button type="button" class="btn ghost sm" id="allPapers">← All practice papers</button>';
+ if(!st||st.stage==='intro'){
+ el.innerHTML=`<div class="card examIntro"><div class="row wraprow" style="justify-content:space-between">${back}<span class="tag goldtag">${esc(p.emoji)} PAPER ${p.id.slice(1)} · 40 MARKS</span></div><h2 style="margin:18px 0 10px">${esc(p.name)}</h2><p class="muted">Ready for a fresh reading challenge? This practice paper has its own story, advert and questions.</p><div class="grid2" style="margin:20px 0"><div class="tip"><b>📖 A: Reading · 15</b><p>Answer questions about a short story.</p></div><div class="tip green"><b>📢 B: Visual literacy · 10</b><p>Look closely at an event advertisement.</p></div><div class="tip green"><b>📝 C: Summary · 5</b><p>Write a clear 50–60 word summary.</p></div><div class="tip"><b>🧠 D: Language · 10</b><p>Grammar, vocabulary and punctuation.</p></div></div><div class="alert-small">⭐ Your star rewards come from lesson and word-bank memory. Paper scores are tracked separately.</div><p style="margin:16px 0">Write each answer first, reveal the model answer, and tick only the ideas you included.</p><button type="button" class="btn teal" id="startExam">Begin ${esc(p.name)} →</button></div>`;
+ $('allPapers').onclick=()=>{activeExamId=null;renderExam()};$('startExam').onclick=initExam;return;
+ }
+ if(st.stage==='finished'){
+  const sum=examTotal(st);
+  if(data.bestPapers[p.id]===undefined||sum>data.bestPapers[p.id]){
+   data.bestPapers[p.id]=sum;if(p.id==='p1')data.bestExam=sum;save();
+  }
+  el.innerHTML=`<div class="examResults"><div class="card result"><div class="medal">${sum>=35?'🏆':sum>=28?'🌟':'📚'}</div><div class="eyebrow">${esc(p.name.toUpperCase())} COMPLETED</div><div class="grade">${sum} / 40</div><h2>${sum>=35?'Fantastic work!':sum>=28?'Keep growing your skills!':'Each answer helps you learn!'}</h2><p class="muted" style="margin:14px 0 22px">Self-marked score · Your best for this paper: ${data.bestPapers[p.id]} / 40.</p><div class="row wraprow" style="justify-content:center"><button class="btn teal" type="button" id="restartExam">Try paper again</button><button class="btn ghost" type="button" id="printExam">Print / Save review</button>${back}</div></div><div class="card" style="margin-top:19px;padding:24px"><h3>📋 Your answer review</h3><p class="small muted" style="margin:8px 0">Read the explanations to see what you could improve.</p>${questionsForPaper.map((q,i)=>`<div class="reviewItem"><div class="row" style="align-items:start;justify-content:space-between;gap:10px"><strong>${esc(q.n)} ${esc(q.q)}</strong><span class="tag" style="white-space:nowrap">${st.marks[i]||0}/${q.m}</span></div><p><b>You wrote:</b> ${esc(st.answers[i]||'(No answer)')}</p><div class="memo review-memo"><b>Example answer</b><p>${esc(q.answer)}</p></div></div>`).join('')}</div></div>`;
+  $('restartExam').onclick=initExam;$('printExam').onclick=()=>window.print();$('allPapers').onclick=()=>{activeExamId=null;renderExam()};return;
+ }
+ const i=Math.max(0,Math.min(st.i,questionsForPaper.length-1)),q=questionsForPaper[i];if(!st.checks)st.checks={};
+ el.innerHTML=`<div class="card examQuestion"><div class="row wraprow" style="justify-content:space-between;gap:10px">${back}<span class="tag goldtag">${esc(p.name)} · 40 marks</span></div><div class="row wraprow" style="justify-content:space-between;gap:9px;margin-top:18px"><span class="tag">SECTION ${q.s} · ${esc(sectionLabel[q.s])}</span><strong class="small">QUESTION ${i+1} / ${questionsForPaper.length}</strong></div><div class="progress" style="margin-top:16px"><span style="width:${100*(i+1)/questionsForPaper.length}%"></span></div>${examContext(q.s,p)}<div class="row" style="justify-content:space-between;align-items:start;gap:14px;margin-top:17px"><h3 class="question" style="margin:0">${esc(q.n)} ${esc(q.q)}</h3><span class="tag goldtag" style="white-space:nowrap">${q.m} ${q.m===1?'mark':'marks'}</span></div><label class="small muted" for="examAnswer" style="display:block;margin-top:17px">Write your answer in your own words:</label><textarea id="examAnswer" class="answerField" placeholder="Type your answer here…" ${st.reveal?'readonly':''}>${esc(st.answers[i]||'')}</textarea>${q.s==='C'?'<p class="small muted" id="summaryCount">Aim for 50–60 words.</p>':''}${!st.reveal?'<button type="button" class="btn primary" id="examReveal">Show model answer →</button>':`<div class="memo"><div class="memo-header"><strong>✅ Example answer</strong><span class="keyhint">🟨 Ideas to look for</span></div><p>${esc(q.answer)}</p></div>${examCriteria(q,i,st)}<button type="button" class="btn teal" id="examNext">${i===questionsForPaper.length-1?'Finish paper 🏁':'Next question →'}</button>`}<p class="small muted" id="examRunningTotal" style="margin-top:16px">${Object.keys(st.marks).length} / ${questionsForPaper.length} questions marked · ${examTotal(st)} / 40 marks so far</p></div>`;
+ $('allPapers').onclick=()=>{activeExamId=null;renderExam()};
+ $('examAnswer').oninput=e=>{st.answers[i]=e.target.value;save();if(q.s==='C')updateSummaryCount()};
+ if(q.s==='C')updateSummaryCount();
+ if(!st.reveal){$('examReveal').onclick=()=>{st.answers[i]=$('examAnswer').value;st.reveal=true;save();renderExam()}}
+ else{
+  el.querySelectorAll('[data-criterion]').forEach(box=>box.addEventListener('change',()=>{
+   const selected=[...el.querySelectorAll('input[data-criterion]:checked')].map(b=>Number(b.dataset.criterion));st.checks[i]=selected;st.marks[i]=Math.min(q.m,selected.length);$('earnedNumber').textContent=st.marks[i]+' / '+q.m;
+   $('examRunningTotal').textContent=Object.keys(st.marks).length+' / '+questionsForPaper.length+' questions marked · '+examTotal(st)+' / 40 marks so far';save();
+  }));
+  $('examNext').onclick=()=>{if(st.marks[i]===undefined)st.marks[i]=0;if(i===questionsForPaper.length-1)st.stage='finished';else{st.i++;st.reveal=false}save();renderExam();window.scrollTo({top:0,behavior:'smooth'})};
+ }
+}
+
+function countWordsIn(s){return (String(s).trim().match(/\S+/g)||[]).length}
+function updateSummaryCount(){const el=$('summaryCount');if(!el)return;const n=countWordsIn($('examAnswer').value);el.textContent=`Your summary: ${n} words · Target: 50–60 words${n>=50&&n<=60?' · In range ✓':''}`;el.style.color=n>=50&&n<=60?'#147850':''}
+function updateWordProgress(){
+ $('wordProgressCount').textContent=countWords()+' / '+wordKeys.length+' words memorised';
+ $('wordProgressStars').textContent=wordPoints()+' / '+MAX_WORD_STARS+' ⭐';
+ $('wordProgressBar').style.width=(100*wordPoints()/MAX_WORD_STARS)+'%';
+ $('totalStarsInBank').textContent=stars()+' / '+MAX_STARS+' ⭐';
+}
+function renderGlossary(){updateTop();updateWordProgress();const search=$('glossSearch').value.trim().toLowerCase();const matches=glossary.filter(x=>(x[0]+' '+x[1]).toLowerCase().includes(search));
+ $('glossCount').textContent=matches.length+' words found · Tap to see the meaning';
+ $('glossItems').innerHTML=matches.length?matches.map(x=>{const known=data.wordKnown.includes(wordKey(x[0]));return `<details class="card glossItem ${known?'known':''}"><summary><strong>${esc(x[0])}</strong><span class="word-chip">${known?'✓ Learnt':'⭐ +2'}</span><span class="glossArrow" aria-hidden="true">⌄</span></summary><div class="glossDefinition"><p>${esc(x[1])}</p><label class="word-check ${known?'is-done':''}"><input type="checkbox" data-word-known="${esc(x[0])}" ${known?'checked':''}><span class="word-check-label">✓ I have memorised this word!</span><span class="word-reward">${known?'⭐ 2 stars earned':'+2 ⭐ stars'}</span></label><span class="word-instruction">Only tick when you can explain it without looking. Untick whenever you want to practise again.</span></div></details>`}).join(''):'<div class="tip">No words found. Try a shorter search.</div>';
+ $('glossItems').querySelectorAll('details.glossItem').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)$('glossItems').querySelectorAll('details.glossItem').forEach(other=>{if(other!==d&&other.open)other.open=false})}));
+ $('glossItems').querySelectorAll('[data-word-known]').forEach(box=>box.addEventListener('change',()=>{
+ const key=wordKey(box.dataset.wordKnown),known=data.wordKnown.includes(key);if(box.checked&&!known)data.wordKnown.push(key);if(!box.checked&&known)data.wordKnown=data.wordKnown.filter(x=>x!==key);
+ save();updateTop();updateWordProgress();const el=box.closest('.glossItem');el.classList.toggle('known',box.checked);el.querySelector('.word-check').classList.toggle('is-done',box.checked);
+ el.querySelector('.word-chip').textContent=box.checked?'✓ Learnt':'⭐ +2';el.querySelector('.word-reward').textContent=box.checked?'⭐ 2 stars earned':'+2 ⭐ stars';if(box.checked&&!known)toast('⭐ +2 word-bank stars!')
+ }));
+}
+$('glossSearch').addEventListener('input',renderGlossary);
+// A copy remains fully functional with no internet connection.
+updateLearnerName();
+renderHome();
+if(!data.learnerName)openNameEditor(true);
+</script>
+</body>
+</html>
